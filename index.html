@@ -173,24 +173,45 @@ details.acc[open] .acc-arrow { transform: rotate(180deg); background: #EFF6FF; c
 .oc { background: var(--greenlt); border: 1px solid #6EE7B7; border-top: 2px solid var(--green); border-radius: 8px; padding: 11px 13px; }
 .oc-name { font-size: 10px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
 .oc-text { font-size: 12px; color: #065F46; line-height: 1.5; }
-/* KPI trend table */
-.kpi-table { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 12px 0; }
-.kpi-table thead th { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--muted); padding: 5px 10px; border-bottom: 2px solid var(--border); text-align: left; }
-.kpi-table thead th:not(:first-child) { text-align: center; }
-.kpi-table tbody tr { border-bottom: 1px solid #F1F5F9; }
-.kpi-table tbody tr:last-child { border-bottom: none; }
-.kpi-table td { padding: 9px 10px; color: var(--slate); vertical-align: middle; }
-.kpi-table td:not(:first-child) { text-align: center; }
-.kpi-table .kpi-label { font-weight: 600; color: var(--ink); }
-.kpi-table .kpi-goal { color: var(--muted); font-size: 11.5px; }
-.kpi-val { font-weight: 700; font-size: 13.5px; }
-.kpi-beat { color: #059669; }
-.kpi-trend-up { color: #059669; font-weight: 700; }
-.kpi-trend-down-good { color: #059669; font-weight: 700; }
-.kpi-trend-neutral { color: var(--muted); }
-.kpi-chip { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 100px; }
-.chip-green { background: #D1FAE5; color: #065F46; }
-.chip-amber { background: #FEF3C7; color: #92400E; }
+/* ── KPI SCORECARD GRID ── */
+.kpi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 14px 0; }
+.kpi-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+.kpi-card-top { padding: 11px 13px 9px; border-bottom: 1px solid #F1F5F9; }
+.kpi-card-name { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+.kpi-card-desc { font-size: 10.5px; color: var(--muted); line-height: 1.4; }
+.kpi-card-body { padding: 10px 13px 11px; background: var(--surface2); }
+.kpi-quarters { display: flex; gap: 6px; align-items: flex-end; margin-bottom: 8px; }
+.kpi-q { flex: 1; }
+.kpi-q-label { font-size: 9.5px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 3px; }
+.kpi-q-val { font-size: 17px; font-weight: 800; line-height: 1; }
+.kpi-q-bar { height: 4px; border-radius: 2px; margin-top: 5px; }
+.kpi-arrow { display: flex; align-items: center; justify-content: center; font-size: 18px; padding-bottom: 4px; flex-shrink: 0; width: 24px; }
+.kpi-card-footer { display: flex; align-items: center; justify-content: space-between; }
+.kpi-goal-label { font-size: 10px; color: var(--muted); }
+.kpi-goal-val { font-size: 10px; font-weight: 700; color: var(--slate); }
+.kpi-badge { font-size: 9.5px; font-weight: 800; padding: 2px 8px; border-radius: 100px; letter-spacing: 0.3px; }
+/* colour variants */
+.kpi-green .kpi-card-name { color: #059669; }
+.kpi-green .kpi-q-val     { color: #059669; }
+.kpi-green .kpi-q-bar     { background: #059669; }
+.kpi-green .kpi-arrow     { color: #059669; }
+.kpi-green .kpi-badge     { background: #D1FAE5; color: #065F46; }
+.kpi-blue  .kpi-card-name { color: var(--blue); }
+.kpi-blue  .kpi-q-val     { color: var(--blue); }
+.kpi-blue  .kpi-q-bar     { background: var(--blue); }
+.kpi-blue  .kpi-arrow     { color: var(--blue); }
+.kpi-blue  .kpi-badge     { background: #EFF6FF; color: #1D4ED8; }
+.kpi-navy  .kpi-card-name { color: var(--navy); }
+.kpi-navy  .kpi-q-val     { color: var(--navy); }
+.kpi-navy  .kpi-q-bar     { background: var(--navy); }
+.kpi-navy  .kpi-arrow     { color: var(--navy); }
+.kpi-navy  .kpi-badge     { background: #EFF6FF; color: var(--navy); }
+.kpi-teal  .kpi-card-name { color: #0D9488; }
+.kpi-teal  .kpi-q-val     { color: #0D9488; }
+.kpi-teal  .kpi-q-bar     { background: #0D9488; }
+.kpi-teal  .kpi-arrow     { color: #0D9488; }
+.kpi-teal  .kpi-badge     { background: #F0FDFA; color: #0F766E; }
+@media(max-width:640px){ .kpi-grid { grid-template-columns: 1fr 1fr; } }
 
 /* ══════════ CERTIFICATIONS (SIDEBAR IN GRID) ══════════ */
 .cert-img-wrap { position: relative; overflow: hidden; border-radius: 10px; box-shadow: 0 3px 16px rgba(0,0,0,0.1); margin-bottom: 14px; transition: transform 0.3s, box-shadow 0.3s; border: 1px solid var(--border); cursor: zoom-in; }
@@ -488,68 +509,171 @@ details.acc[open] .acc-arrow { transform: rotate(180deg); background: #EFF6FF; c
           <div class="acc-body">
             <p class="intro-p">I own a weekly operational metrics framework — not a dashboard I read, but a cadence I designed, defined, and defend in front of senior leadership every week. The table below is live AMER Field Service H1 FY27 performance data: goal vs actual, with Q1→Q2 trajectory. Every metric tells a story about resource allocation, customer retention, and operational discipline — and I know how to read and act on all of them.</p>
 
-            <table class="kpi-table">
-              <thead>
-                <tr>
-                  <th>KPI</th>
-                  <th>Goal</th>
-                  <th>FY27 Q1</th>
-                  <th>FY27 Q2</th>
-                  <th>Trend</th>
-                  <th>vs Goal</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><span class="kpi-label">CSAT</span><br/><span style="font-size:11px;color:var(--muted)">Customer satisfaction · retention signal</span></td>
-                  <td class="kpi-goal">≥ 4.70</td>
-                  <td><span class="kpi-val kpi-beat">4.76</span></td>
-                  <td><span class="kpi-val kpi-beat">4.70</span></td>
-                  <td><span class="kpi-trend-neutral">→ Stable</span></td>
-                  <td><span class="kpi-chip chip-green">✓ At Goal</span></td>
-                </tr>
-                <tr>
-                  <td><span class="kpi-label">TTR</span><br/><span style="font-size:11px;color:var(--muted)">Time-to-Resolve · resource efficiency</span></td>
-                  <td class="kpi-goal">&lt; 7.0 days</td>
-                  <td><span class="kpi-val kpi-beat">6.01</span></td>
-                  <td><span class="kpi-val kpi-beat">5.15</span></td>
-                  <td><span class="kpi-trend-down-good">↓ −0.86 days</span></td>
-                  <td><span class="kpi-chip chip-green">✓ Beat Goal</span></td>
-                </tr>
-                <tr>
-                  <td><span class="kpi-label">Escalation %</span><br/><span style="font-size:11px;color:var(--muted)">Customer effort &amp; risk indicator</span></td>
-                  <td class="kpi-goal">&lt; 1.5%</td>
-                  <td><span class="kpi-val kpi-beat">1.18%</span></td>
-                  <td><span class="kpi-val kpi-beat">0.72%</span></td>
-                  <td><span class="kpi-trend-down-good">↓ −0.46pp</span></td>
-                  <td><span class="kpi-chip chip-green">✓ Beat Goal</span></td>
-                </tr>
-                <tr>
-                  <td><span class="kpi-label">SLO Miss %</span><br/><span style="font-size:11px;color:var(--muted)">Commitment compliance</span></td>
-                  <td class="kpi-goal">&lt; 1.0%</td>
-                  <td><span class="kpi-val kpi-beat">0%</span></td>
-                  <td><span class="kpi-val kpi-beat">0.1%</span></td>
-                  <td><span class="kpi-trend-neutral">→ Negligible</span></td>
-                  <td><span class="kpi-chip chip-green">✓ Beat Goal</span></td>
-                </tr>
-                <tr>
-                  <td><span class="kpi-label">Inflow vs Closures</span><br/><span style="font-size:11px;color:var(--muted)">Backlog health &amp; throughput</span></td>
-                  <td class="kpi-goal">Closures ≥ Inflow</td>
-                  <td><span class="kpi-val kpi-beat">1,520 in</span></td>
-                  <td><span class="kpi-val kpi-beat">1,676 in · 3,234 closed</span></td>
-                  <td><span class="kpi-trend-down-good">↑ Closures outpacing inflow</span></td>
-                  <td><span class="kpi-chip chip-green">✓ Beat Goal</span></td>
-                </tr>
-                <tr>
-                  <td><span class="kpi-label">Repeat Rate (RR%)</span><br/><span style="font-size:11px;color:var(--muted)">Resolution quality · customer re-contact</span></td>
-                  <td class="kpi-goal">Downward trend</td>
-                  <td><span class="kpi-val kpi-beat">9.8%</span></td>
-                  <td><span class="kpi-val kpi-beat">9.6%</span></td>
-                  <td><span class="kpi-trend-down-good">↓ Improving</span></td>
-                  <td><span class="kpi-chip chip-green">✓ Trending Right</span></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="kpi-grid">
+
+              <!-- CSAT -->
+              <div class="kpi-card kpi-green">
+                <div class="kpi-card-top">
+                  <div class="kpi-card-name">CSAT</div>
+                  <div class="kpi-card-desc">Customer satisfaction · retention signal</div>
+                </div>
+                <div class="kpi-card-body">
+                  <div class="kpi-quarters">
+                    <div class="kpi-q">
+                      <div class="kpi-q-label">Q1</div>
+                      <div class="kpi-q-val">4.76</div>
+                      <div class="kpi-q-bar" style="opacity:0.5"></div>
+                    </div>
+                    <div class="kpi-arrow">→</div>
+                    <div class="kpi-q">
+                      <div class="kpi-q-label">Q2</div>
+                      <div class="kpi-q-val">4.70</div>
+                      <div class="kpi-q-bar"></div>
+                    </div>
+                  </div>
+                  <div class="kpi-card-footer">
+                    <span class="kpi-goal-label">Goal: <span class="kpi-goal-val">≥ 4.70</span></span>
+                    <span class="kpi-badge">✓ At Goal</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TTR -->
+              <div class="kpi-card kpi-blue">
+                <div class="kpi-card-top">
+                  <div class="kpi-card-name">TTR (days)</div>
+                  <div class="kpi-card-desc">Time-to-Resolve · resource efficiency</div>
+                </div>
+                <div class="kpi-card-body">
+                  <div class="kpi-quarters">
+                    <div class="kpi-q">
+                      <div class="kpi-q-label">Q1</div>
+                      <div class="kpi-q-val">6.01</div>
+                      <div class="kpi-q-bar" style="opacity:0.5"></div>
+                    </div>
+                    <div class="kpi-arrow">↓</div>
+                    <div class="kpi-q">
+                      <div class="kpi-q-label">Q2</div>
+                      <div class="kpi-q-val">5.15</div>
+                      <div class="kpi-q-bar"></div>
+                    </div>
+                  </div>
+                  <div class="kpi-card-footer">
+                    <span class="kpi-goal-label">Goal: <span class="kpi-goal-val">&lt; 7.0</span></span>
+                    <span class="kpi-badge">✓ Beat · −0.86d</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Escalation % -->
+              <div class="kpi-card kpi-teal">
+                <div class="kpi-card-top">
+                  <div class="kpi-card-name">Escalation %</div>
+                  <div class="kpi-card-desc">Customer effort &amp; risk indicator</div>
+                </div>
+                <div class="kpi-card-body">
+                  <div class="kpi-quarters">
+                    <div class="kpi-q">
+                      <div class="kpi-q-label">Q1</div>
+                      <div class="kpi-q-val">1.18%</div>
+                      <div class="kpi-q-bar" style="opacity:0.5"></div>
+                    </div>
+                    <div class="kpi-arrow">↓</div>
+                    <div class="kpi-q">
+                      <div class="kpi-q-label">Q2</div>
+                      <div class="kpi-q-val">0.72%</div>
+                      <div class="kpi-q-bar"></div>
+                    </div>
+                  </div>
+                  <div class="kpi-card-footer">
+                    <span class="kpi-goal-label">Goal: <span class="kpi-goal-val">&lt; 1.5%</span></span>
+                    <span class="kpi-badge">✓ Beat · −0.46pp</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SLO Miss -->
+              <div class="kpi-card kpi-navy">
+                <div class="kpi-card-top">
+                  <div class="kpi-card-name">SLO Miss %</div>
+                  <div class="kpi-card-desc">Commitment compliance · zero-breach target</div>
+                </div>
+                <div class="kpi-card-body">
+                  <div class="kpi-quarters">
+                    <div class="kpi-q">
+                      <div class="kpi-q-label">Q1</div>
+                      <div class="kpi-q-val">0%</div>
+                      <div class="kpi-q-bar" style="opacity:0.5"></div>
+                    </div>
+                    <div class="kpi-arrow">→</div>
+                    <div class="kpi-q">
+                      <div class="kpi-q-label">Q2</div>
+                      <div class="kpi-q-val">0.1%</div>
+                      <div class="kpi-q-bar"></div>
+                    </div>
+                  </div>
+                  <div class="kpi-card-footer">
+                    <span class="kpi-goal-label">Goal: <span class="kpi-goal-val">&lt; 1.0%</span></span>
+                    <span class="kpi-badge">✓ Near-Zero</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Repeat Rate -->
+              <div class="kpi-card kpi-green">
+                <div class="kpi-card-top">
+                  <div class="kpi-card-name">Repeat Rate %</div>
+                  <div class="kpi-card-desc">Resolution quality · customer re-contact</div>
+                </div>
+                <div class="kpi-card-body">
+                  <div class="kpi-quarters">
+                    <div class="kpi-q">
+                      <div class="kpi-q-label">Q1</div>
+                      <div class="kpi-q-val">9.8%</div>
+                      <div class="kpi-q-bar" style="opacity:0.5"></div>
+                    </div>
+                    <div class="kpi-arrow">↓</div>
+                    <div class="kpi-q">
+                      <div class="kpi-q-label">Q2</div>
+                      <div class="kpi-q-val">9.6%</div>
+                      <div class="kpi-q-bar"></div>
+                    </div>
+                  </div>
+                  <div class="kpi-card-footer">
+                    <span class="kpi-goal-label">Goal: <span class="kpi-goal-val">↓ Trend</span></span>
+                    <span class="kpi-badge">✓ Improving</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Throughput -->
+              <div class="kpi-card kpi-blue">
+                <div class="kpi-card-top">
+                  <div class="kpi-card-name">Throughput</div>
+                  <div class="kpi-card-desc">Backlog health · closures vs inflow</div>
+                </div>
+                <div class="kpi-card-body">
+                  <div class="kpi-quarters">
+                    <div class="kpi-q">
+                      <div class="kpi-q-label">Inflow H1</div>
+                      <div class="kpi-q-val" style="font-size:14px">3,196</div>
+                      <div class="kpi-q-bar" style="opacity:0.5"></div>
+                    </div>
+                    <div class="kpi-arrow">↑</div>
+                    <div class="kpi-q">
+                      <div class="kpi-q-label">Closed H1</div>
+                      <div class="kpi-q-val" style="font-size:14px">3,234</div>
+                      <div class="kpi-q-bar"></div>
+                    </div>
+                  </div>
+                  <div class="kpi-card-footer">
+                    <span class="kpi-goal-label">Goal: <span class="kpi-goal-val">Closures ≥ Inflow</span></span>
+                    <span class="kpi-badge">✓ +38 surplus</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
 
             <div class="insight">Four core KPIs at or above goal. TTR improved by 0.86 days Q1→Q2. Escalation rate more than halved — 1.18% → 0.72% — well below the 1.5% threshold. Closures outpacing inflow. These are not inherited numbers; they reflect deliberate resource allocation, coaching investment, and a weekly operating cadence that keeps the team accountable to outcomes, not activity. That analytical discipline is directly transferable to PM metrics ownership.</div>
           </div>
