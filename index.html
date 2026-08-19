@@ -52,23 +52,20 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink
   pointer-events: none;
 }
 .hero-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 210px 1fr;
   position: relative; z-index: 1;
-  padding: 48px 48px 44px;
-  gap: 0;
+  align-items: center;
 }
 .hero-photo-col {
+  padding: 44px 0 44px 44px;
   display: flex; flex-direction: column; align-items: center; gap: 14px;
-  margin-bottom: 22px;
 }
 .hero-avatar {
-  width: 120px; height: 120px;
+  width: 155px; height: 155px;
   border-radius: 50%;
-  border: 3px solid rgba(255,255,255,0.22);
-  box-shadow: 0 0 0 7px rgba(37,99,235,0.2), 0 12px 40px rgba(0,0,0,0.5);
+  border: 4px solid rgba(255,255,255,0.18);
+  box-shadow: 0 0 0 8px rgba(37,99,235,0.18), 0 16px 48px rgba(0,0,0,0.5);
   object-fit: cover;
   object-position: center top;
   display: block;
@@ -85,19 +82,19 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink
 .status-dot { width: 6px; height: 6px; background: #34D399; border-radius: 50%; animation: blink 2s infinite; }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
-.hero-content { width: 100%; display: flex; flex-direction: column; align-items: center; }
-.hero-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(96,165,250,0.85); margin-bottom: 10px; }
-.hero-name { font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 900; color: #fff; line-height: 1.0; letter-spacing: -2px; margin-bottom: 8px; }
-.hero-role { font-size: 13.5px; color: rgba(255,255,255,0.7); margin-bottom: 22px; font-weight: 500; letter-spacing: 0.2px; }
-.hero-quote { font-size: 14px; font-style: italic; color: rgba(255,255,255,0.82); line-height: 1.85; padding: 0 20px; border-left: none; border-top: 1px solid rgba(59,130,246,0.35); border-bottom: 1px solid rgba(59,130,246,0.35); max-width: 640px; margin-bottom: 28px; padding-top: 16px; padding-bottom: 16px; }
-.hero-stats { display: flex; gap: 0; margin-bottom: 22px; flex-wrap: wrap; justify-content: center; }
-.hstat { padding: 12px 28px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-right: none; text-align: center; }
+.hero-content { padding: 40px 48px 40px 30px; }
+.hero-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(96,165,250,0.85); margin-bottom: 8px; }
+.hero-name { font-family: 'Playfair Display', serif; font-size: 50px; font-weight: 900; color: #fff; line-height: 1.0; letter-spacing: -2px; margin-bottom: 6px; }
+.hero-role { font-size: 13.5px; color: rgba(148,186,224,0.9); margin-bottom: 20px; font-weight: 500; }
+.hero-quote { font-size: 14px; font-style: italic; color: rgba(196,217,238,0.85); line-height: 1.85; padding-left: 16px; border-left: 3px solid rgba(59,130,246,0.55); max-width: 580px; margin-bottom: 24px; }
+.hero-stats { display: flex; gap: 0; margin-bottom: 20px; flex-wrap: wrap; }
+.hstat { padding: 12px 22px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-right: none; text-align: center; }
 .hstat:first-child { border-radius: 10px 0 0 10px; }
-.hstat:last-child  { border-right: 1px solid rgba(255,255,255,0.1); border-radius: 0 10px 10px 0; }
-.hstat-v { font-size: 22px; font-weight: 900; color: #fff; letter-spacing: -1px; line-height: 1; display: block; }
-.hstat-l { font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.45); display: block; margin-top: 4px; }
-.hero-contacts { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
-.hc { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 6px 14px; font-size: 11.5px; color: rgba(255,255,255,0.75); }
+.hstat:last-child  { border-right: 1px solid rgba(255,255,255,0.08); border-radius: 0 10px 10px 0; }
+.hstat-v { font-size: 20px; font-weight: 900; color: #60A5FA; letter-spacing: -1px; line-height: 1; display: block; }
+.hstat-l { font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(100,116,139,0.9); display: block; margin-top: 3px; }
+.hero-contacts { display: flex; flex-wrap: wrap; gap: 8px; }
+.hc { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 5px 12px; font-size: 11.5px; color: rgba(148,186,224,0.8); }
 
 /* ══════════ CARD ══════════ */
 .card { background: var(--surface); border-radius: 16px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,0.04); margin-bottom: 22px; }
@@ -315,9 +312,8 @@ details.acc[open] .acc-arrow { transform: rotate(180deg); background: #EFF6FF; c
 
 /* ══════════ RESPONSIVE ══════════ */
 @media (max-width: 860px) {
-  .hero-inner           { padding: 36px 24px 32px; }
-  .hero-photo-col       { margin-bottom: 16px; }
-  .hero-name            { font-size: 38px; }
+  .hero-inner           { grid-template-columns: 1fr; }
+  .hero-photo-col       { padding: 32px 32px 0; flex-direction: row; align-items: center; gap: 18px; }
   .strengths-certs-row  { grid-template-columns: 1fr; }
   .brings-grid          { grid-template-columns: 1fr; }
   .philo-body           { grid-template-columns: 1fr; }
@@ -342,11 +338,11 @@ details.acc[open] .acc-arrow { transform: rotate(180deg); background: #EFF6FF; c
     <div class="hero-content">
       <div class="hero-eyebrow">Talent Profile &nbsp;·&nbsp; Product Management</div>
       <h1 class="hero-name">Justin Katikmutyan</h1>
-      <div class="hero-role">Manager, Technical Support Engineering — Field Service &nbsp;·&nbsp; Salesforce &nbsp;·&nbsp; Hyderabad, India</div>
+      <div class="hero-role">Manager, Technical Support Engineering — Service Cloud, Salesforce &nbsp;·&nbsp; Hyderabad, India</div>
       <div class="hero-quote">"I have spent 3 years at the intersection of customer reality and product intent for Field Service. I know what breaks, what delights, and what the roadmap is missing — and I have the PM credentials to now do something about it."</div>
       <div class="hero-stats">
         <div class="hstat"><span class="hstat-v">19+</span><span class="hstat-l">Years Exp.</span></div>
-        <div class="hstat"><span class="hstat-v">1,435</span><span class="hstat-l">Accounts Engaged</span></div>
+        <div class="hstat"><span class="hstat-v">$36M+</span><span class="hstat-l">Renewals Protected</span></div>
         <div class="hstat"><span class="hstat-v">3</span><span class="hstat-l">PM Certs</span></div>
         <div class="hstat"><span class="hstat-v">53</span><span class="hstat-l">Team Peak</span></div>
       </div>
