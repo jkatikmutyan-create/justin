@@ -332,25 +332,27 @@ body {
   min-height: 100vh;
 }
 
-/* ── CARDS — 3D lift ── */
+/* ── CARDS — 3D lift with left-flash like dashboard ── */
 .card {
   border: 1px solid rgba(213,222,236,0.9);
   border-bottom-color: #C8D3E4;
   border-right-color: #D0D9E8;
+  border-left: 4px solid transparent;
   box-shadow:
     0 1px 0 rgba(255,255,255,0.95) inset,
     0 2px 6px rgba(0,0,0,0.05),
-    0 8px 28px rgba(0,0,0,0.07),
-    0 1px 3px rgba(0,0,0,0.04);
-  transition: box-shadow 0.35s ease, transform 0.35s ease;
+    0 8px 28px rgba(0,0,0,0.07);
+  transition: box-shadow 0.28s ease, transform 0.28s ease, border-left-color 0.2s, background 0.25s;
 }
 .card:hover {
+  border-left-color: var(--blue);
+  background: linear-gradient(135deg, #F5F9FF 0%, #FFFFFF 40%);
   box-shadow:
     0 1px 0 rgba(255,255,255,0.95) inset,
-    0 4px 12px rgba(0,0,0,0.06),
-    0 18px 52px rgba(27,79,216,0.11),
-    0 2px 6px rgba(0,0,0,0.05);
-  transform: translateY(-3px);
+    0 8px 30px rgba(27,79,216,0.13),
+    0 24px 56px rgba(0,0,0,0.09),
+    -4px 0 0 rgba(27,79,216,0.25);
+  transform: translateY(-5px) translateX(2px);
 }
 
 /* ── CARD HEADERS — embossed gradient ── */
@@ -363,15 +365,15 @@ body {
 .card-icon {
   box-shadow:
     0 1px 0 rgba(255,255,255,0.85) inset,
-    0 2px 8px rgba(0,0,0,0.13),
+    0 3px 10px rgba(0,0,0,0.15),
     0 0 0 1px rgba(0,0,0,0.04) inset;
   transition: transform 0.25s, box-shadow 0.25s;
 }
 .card:hover .card-icon {
-  transform: scale(1.1) rotate(-4deg);
+  transform: scale(1.15) rotate(-5deg);
   box-shadow:
     0 1px 0 rgba(255,255,255,0.85) inset,
-    0 5px 14px rgba(0,0,0,0.2),
+    0 6px 18px rgba(0,0,0,0.22),
     0 0 0 1px rgba(0,0,0,0.04) inset;
 }
 .ci-blue   { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); }
@@ -381,24 +383,27 @@ body {
 .ci-green  { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); }
 .ci-navy   { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); }
 
-/* ── ACCORDION — 3D depth + hover ── */
+/* ── ACCORDION — strong lift + left flash ── */
 details.acc {
+  border-left: 4px solid transparent;
   box-shadow:
     0 1px 0 rgba(255,255,255,0.9) inset,
     0 2px 8px rgba(0,0,0,0.05),
     0 4px 16px rgba(0,0,0,0.04);
-  transition: box-shadow 0.3s, border-color 0.25s, transform 0.25s;
+  transition: box-shadow 0.28s, border-color 0.2s, transform 0.28s, background 0.25s;
 }
 details.acc:not([open]):hover {
-  border-color: #A5C0F5;
+  border-color: var(--blue);
+  background: linear-gradient(135deg, #F5F9FF 0%, #FFFFFF 50%);
   box-shadow:
     0 1px 0 rgba(255,255,255,0.9) inset,
-    0 4px 18px rgba(27,79,216,0.1),
-    0 8px 28px rgba(0,0,0,0.05);
-  transform: translateY(-2px);
+    0 8px 28px rgba(27,79,216,0.14),
+    0 18px 44px rgba(0,0,0,0.07),
+    -4px 0 0 rgba(27,79,216,0.3);
+  transform: translateY(-4px) translateX(2px);
 }
 details.acc[open] {
-  border-color: #93BFFD;
+  border-left-color: var(--blue2);
   box-shadow:
     0 1px 0 rgba(255,255,255,0.9) inset,
     0 6px 28px rgba(27,79,216,0.13),
@@ -408,45 +413,53 @@ details.acc[open] {
   box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* ── PM-LIST rows — pastel hover ── */
+/* ── PM-LIST rows — dashboard-style row highlight ── */
 .pm-list li {
   border-radius: 8px;
-  padding: 10px 10px 10px 10px;
-  margin: 0 -8px;
-  transition: background 0.22s, border-bottom-color 0.22s;
+  padding: 10px 12px;
+  margin: 0 -10px;
+  border-left: 3px solid transparent;
+  transition: background 0.2s, border-left-color 0.2s, transform 0.2s, box-shadow 0.2s;
   cursor: default;
 }
 .pm-list li:hover {
-  background: linear-gradient(90deg, rgba(99,102,241,0.07) 0%, rgba(59,130,246,0.04) 100%);
+  background: linear-gradient(90deg, #EEF4FF 0%, #F8FAFF 100%);
+  border-left-color: var(--blue);
+  transform: translateX(4px);
+  box-shadow: 0 2px 12px rgba(27,79,216,0.09);
   border-bottom-color: transparent;
 }
 
-/* ── CASE CARDS — slide + glow hover ── */
+/* ── CASE CARDS — strong slide + glow ── */
 .case {
-  transition: box-shadow 0.25s, transform 0.25s, background 0.25s, border-left-color 0.25s;
+  transition: box-shadow 0.25s, transform 0.25s, background 0.25s, border-left-color 0.22s;
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
 .case:hover {
-  background: #F0F7FF;
-  border-left-color: #3B82F6;
-  box-shadow: 0 4px 20px rgba(27,79,216,0.12), 4px 0 0 rgba(59,130,246,0.15);
-  transform: translateX(4px);
+  background: linear-gradient(90deg, #EBF3FF 0%, #F5F9FF 100%);
+  border-left-color: #2563EB;
+  border-left-width: 4px;
+  box-shadow: 0 6px 24px rgba(27,79,216,0.15), 0 2px 8px rgba(0,0,0,0.06);
+  transform: translateX(6px);
 }
 
-/* ── PANEL LIST rows — hover ── */
+/* ── PANEL LIST rows — dashboard highlight ── */
 .panel-list li {
   border-radius: 8px;
-  padding: 8px 10px;
-  margin: 0 -10px;
-  transition: background 0.22s, padding-left 0.22s;
+  padding: 8px 12px;
+  margin: 0 -12px;
+  border-left: 3px solid transparent;
+  transition: background 0.2s, border-left-color 0.2s, transform 0.2s;
   cursor: default;
 }
 .panel-list li:hover {
-  padding-left: 16px;
-  background: rgba(59,130,246,0.08);
+  background: rgba(27,79,216,0.07);
+  border-left-color: var(--blue);
+  transform: translateX(5px);
 }
 .grows .panel-list li:hover {
-  background: rgba(5,150,105,0.08);
+  background: rgba(5,150,105,0.07);
+  border-left-color: var(--green);
 }
 .panel.brings {
   box-shadow: 0 1px 0 rgba(255,255,255,0.95) inset, 0 4px 20px rgba(27,79,216,0.08);
@@ -455,97 +468,107 @@ details.acc[open] {
   box-shadow: 0 1px 0 rgba(255,255,255,0.95) inset, 0 4px 20px rgba(5,150,105,0.08);
 }
 
-/* ── PILLAR CARDS — hover lift ── */
+/* ── PILLAR CARDS — dashboard row feel ── */
 .pillar-card {
   box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 2px 10px rgba(0,0,0,0.06);
   transition: box-shadow 0.25s, transform 0.25s, background 0.25s;
 }
 .pillar-card:hover {
-  background: #F5F8FF;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 8px 24px rgba(0,0,0,0.1);
-  transform: translateX(5px);
+  background: linear-gradient(90deg, #F0F7FF 0%, #F8FBFF 100%);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 8px 28px rgba(0,0,0,0.11);
+  transform: translateX(6px);
 }
 
-/* ── KPI CARDS — 3D hover ── */
+/* ── KPI CARDS — pop up like dashboard ── */
 .kpi-card {
   box-shadow:
     0 1px 0 rgba(255,255,255,0.95) inset,
     0 3px 12px rgba(0,0,0,0.07),
     0 1px 4px rgba(0,0,0,0.05);
-  transition: transform 0.25s, box-shadow 0.25s;
+  transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
 }
 .kpi-card:hover {
-  transform: translateY(-4px) scale(1.01);
+  transform: translateY(-6px) scale(1.02);
+  background: linear-gradient(160deg, #F8FCFF 0%, #FFFFFF 100%);
   box-shadow:
     0 1px 0 rgba(255,255,255,0.95) inset,
-    0 10px 32px rgba(0,0,0,0.11),
-    0 2px 8px rgba(0,0,0,0.06);
+    0 14px 40px rgba(0,0,0,0.13),
+    0 4px 12px rgba(0,0,0,0.07);
 }
 
-/* ── CAREER CARDS — 3D hover ── */
+/* ── CAREER CARDS — dashboard lift ── */
 .tl-card {
   box-shadow:
     0 1px 0 rgba(255,255,255,0.95) inset,
     0 3px 12px rgba(0,0,0,0.06),
     0 1px 4px rgba(0,0,0,0.04);
+  border-left: 4px solid var(--blue);
 }
+.tl-card.current { border-left-color: var(--green); }
 .tl-card:hover {
   box-shadow:
     0 1px 0 rgba(255,255,255,0.95) inset,
-    0 10px 32px rgba(27,79,216,0.13),
-    0 2px 8px rgba(0,0,0,0.06);
-  transform: translateY(-4px);
+    0 14px 40px rgba(27,79,216,0.15),
+    0 4px 12px rgba(0,0,0,0.07);
+  transform: translateY(-6px);
+  background: linear-gradient(135deg, #F4F9FF 0%, #FFFFFF 50%);
 }
 .tl-pts li {
   border-radius: 6px;
   padding-left: 20px;
-  transition: background 0.2s, padding-left 0.2s;
+  border-left: 2px solid transparent;
+  transition: background 0.2s, padding-left 0.2s, border-left-color 0.2s;
   cursor: default;
 }
 .tl-pts li:hover {
-  background: rgba(59,130,246,0.06);
-  padding-left: 24px;
+  background: rgba(59,130,246,0.07);
+  border-left-color: var(--blue);
+  padding-left: 26px;
 }
 .tl-card.current .tl-pts li:hover {
-  background: rgba(5,150,105,0.06);
+  background: rgba(5,150,105,0.07);
+  border-left-color: var(--green);
 }
 
-/* ── ADD-CERT rows — hover ── */
+/* ── ADD-CERT rows ── */
 .add-cert {
   box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 2px 6px rgba(0,0,0,0.05);
+  border-left: 3px solid transparent;
   transition: border-color 0.2s, background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 .add-cert:hover {
-  transform: translateX(4px);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 5px 18px rgba(5,150,105,0.12);
+  transform: translateX(5px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 6px 20px rgba(5,150,105,0.13);
+  border-left-color: var(--green);
   border-color: #6EE7B7;
   background: #F0FDF4;
 }
 
-/* ── CERT IMAGES — 3D hover ── */
+/* ── CERT IMAGES ── */
 .cert-img-wrap {
   box-shadow: 0 4px 18px rgba(0,0,0,0.13), 0 1px 4px rgba(0,0,0,0.08);
 }
 .cert-img-wrap:hover {
-  box-shadow: 0 12px 36px rgba(0,0,0,0.22), 0 2px 8px rgba(0,0,0,0.1);
-  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.22), 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-5px) scale(1.015);
 }
 
-/* ── INSIGHT + HONEST callouts — hover ── */
-.insight { transition: background 0.25s, border-left-color 0.25s; cursor: default; }
-.insight:hover { background: #E0EEFF; border-left-color: var(--blue2); }
-.honest { transition: background 0.25s; cursor: default; }
-.honest:hover { background: #FEF9E7; }
+/* ── INSIGHT + HONEST callouts ── */
+.insight { transition: background 0.25s, border-left-color 0.25s, transform 0.22s; cursor: default; }
+.insight:hover { background: #DDEEFF; border-left-color: var(--blue2); transform: translateX(4px); }
+.honest { transition: background 0.25s, transform 0.22s; cursor: default; }
+.honest:hover { background: #FEF7E0; transform: translateX(4px); }
 
 /* ── OUTCOMES oc-cards ── */
 .oc {
   box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 2px 8px rgba(5,150,105,0.08);
-  transition: transform 0.22s, box-shadow 0.22s;
+  transition: transform 0.22s, box-shadow 0.22s, background 0.22s;
   cursor: default;
 }
 .oc:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 8px 22px rgba(5,150,105,0.15);
+  transform: translateY(-5px);
+  background: #ECFDF5;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 10px 28px rgba(5,150,105,0.18);
 }
 </style>
 </head>
