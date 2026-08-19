@@ -132,7 +132,7 @@ details.acc { background: var(--surface); border: none; border-bottom: 1px solid
 details.acc:first-child { border-radius: 12px 12px 0 0; }
 details.acc:last-child  { border-bottom: none; border-radius: 0 0 12px 12px; }
 details.acc[open] { background: #FAFCFF; }
-details.acc:not([open]):hover { background: #F5F8FF; }
+details.acc:not([open]):hover { background: #F5F2EC; }
 details.acc summary { display: flex; align-items: center; gap: 12px; padding: 16px 20px; cursor: pointer; list-style: none; user-select: none; background: var(--surface); transition: background 0.2s; }
 details.acc[open] summary { background: var(--surface2); }
 details.acc summary::-webkit-details-marker { display: none; }
@@ -180,7 +180,7 @@ details.acc[open] .acc-arrow { transform: rotate(180deg); background: #EFF6FF; c
 .cases { display: flex; flex-direction: column; gap: 0; margin-top: 16px; }
 .case { background: transparent; border: none; border-top: 1px solid #EDF1F8; border-radius: 0; padding: 16px 4px 16px 16px; border-left: 3px solid transparent; transition: background 0.2s, border-left-color 0.2s, padding-left 0.2s; }
 .cases .case:first-child { border-top: none; padding-top: 0; }
-.case:hover { background: #F4F8FF; border-left-color: var(--blue); padding-left: 20px; }
+.case:hover { background: #F2EFE9; border-left-color: #A0896A; padding-left: 20px; }
 .case-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 4px; }
 .case-co   { font-size: 13.5px; font-weight: 700; color: var(--ink); }
 .case-pill { background: var(--navy); color: #fff; font-size: 9.5px; font-weight: 700; padding: 3px 10px; border-radius: 100px; flex-shrink: 0; }
@@ -190,7 +190,7 @@ details.acc[open] .acc-arrow { transform: rotate(180deg); background: #EFF6FF; c
 .pm-list { list-style: none; display: flex; flex-direction: column; }
 .pm-list li { display: flex; gap: 11px; padding: 9px 8px; border-bottom: 1px solid #F1F5F9; font-size: 13px; color: var(--slate); line-height: 1.65; border-radius: 6px; border-left: 2px solid transparent; transition: background 0.2s, border-left-color 0.2s, padding-left 0.2s; cursor: default; }
 .pm-list li:last-child { border-bottom: none; }
-.pm-list li:hover { background: #EEF4FF; border-left-color: var(--blue); padding-left: 14px; }
+.pm-list li:hover { background: #F2EFE9; border-left-color: #A0896A; padding-left: 14px; }
 .pm-dot { width: 20px; height: 20px; border-radius: 5px; background: var(--blue); color: #fff; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
 .intro-p { font-size: 13.5px; color: var(--slate); line-height: 1.75; margin-bottom: 14px; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
@@ -372,19 +372,19 @@ body {
   transition: box-shadow 0.28s ease, transform 0.28s ease, border-left-color 0.2s, background 0.25s;
 }
 .card:hover {
-  border-left-color: var(--blue);
-  background: linear-gradient(135deg, #F5F9FF 0%, #FFFFFF 40%);
+  border-left-color: #A0896A;
+  background: linear-gradient(135deg, #FAF8F5 0%, #FFFFFF 40%);
   box-shadow:
     0 1px 0 rgba(255,255,255,0.95) inset,
-    0 8px 30px rgba(27,79,216,0.13),
-    0 24px 56px rgba(0,0,0,0.09),
-    -4px 0 0 rgba(27,79,216,0.25);
+    0 8px 30px rgba(160,137,106,0.18),
+    0 24px 56px rgba(0,0,0,0.08),
+    -4px 0 0 rgba(160,137,106,0.3);
   transform: translateY(-5px) translateX(2px);
 }
 
 /* ── CARD HEADERS — embossed gradient ── */
 .card-header {
-  background: linear-gradient(135deg, #FFFFFF 0%, #EEF4FF 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #F7F4EF 100%);
   box-shadow: 0 1px 0 rgba(255,255,255,1) inset, 0 2px 5px rgba(0,0,0,0.03);
 }
 
@@ -419,7 +419,7 @@ body {
 
 /* ── CASE CARDS — handled in base styles above ── */
 
-/* ── PANEL LIST rows — dashboard highlight ── */
+/* ── PANEL LIST rows — japandi highlight ── */
 .panel-list li {
   border-radius: 8px;
   padding: 8px 12px;
@@ -429,13 +429,13 @@ body {
   cursor: default;
 }
 .panel-list li:hover {
-  background: rgba(27,79,216,0.07);
-  border-left-color: var(--blue);
+  background: rgba(160,137,106,0.1);
+  border-left-color: #A0896A;
   transform: translateX(5px);
 }
 .grows .panel-list li:hover {
-  background: rgba(5,150,105,0.07);
-  border-left-color: var(--green);
+  background: rgba(143,166,140,0.12);
+  border-left-color: #8FA68C;
 }
 .panel.brings {
   box-shadow: 0 1px 0 rgba(255,255,255,0.95) inset, 0 4px 20px rgba(27,79,216,0.08);
@@ -450,8 +450,8 @@ body {
   transition: box-shadow 0.25s, transform 0.25s, background 0.25s;
 }
 .pillar-card:hover {
-  background: linear-gradient(90deg, #F0F7FF 0%, #F8FBFF 100%);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 8px 28px rgba(0,0,0,0.11);
+  background: linear-gradient(90deg, #F5F2EC 0%, #FAF8F5 100%);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 8px 28px rgba(160,137,106,0.14);
   transform: translateX(6px);
 }
 
@@ -465,7 +465,7 @@ body {
 }
 .kpi-card:hover {
   transform: translateY(-6px) scale(1.02);
-  background: linear-gradient(160deg, #F8FCFF 0%, #FFFFFF 100%);
+  background: linear-gradient(160deg, #FAF8F5 0%, #FFFFFF 100%);
   box-shadow:
     0 1px 0 rgba(255,255,255,0.95) inset,
     0 14px 40px rgba(0,0,0,0.13),
@@ -484,10 +484,10 @@ body {
 .tl-card:hover {
   box-shadow:
     0 1px 0 rgba(255,255,255,0.95) inset,
-    0 14px 40px rgba(27,79,216,0.15),
+    0 14px 40px rgba(160,137,106,0.18),
     0 4px 12px rgba(0,0,0,0.07);
   transform: translateY(-6px);
-  background: linear-gradient(135deg, #F4F9FF 0%, #FFFFFF 50%);
+  background: linear-gradient(135deg, #FAF8F5 0%, #FFFFFF 50%);
 }
 .tl-pts li {
   border-radius: 6px;
@@ -497,13 +497,13 @@ body {
   cursor: default;
 }
 .tl-pts li:hover {
-  background: rgba(59,130,246,0.07);
-  border-left-color: var(--blue);
+  background: rgba(160,137,106,0.09);
+  border-left-color: #A0896A;
   padding-left: 26px;
 }
 .tl-card.current .tl-pts li:hover {
-  background: rgba(5,150,105,0.07);
-  border-left-color: var(--green);
+  background: rgba(143,166,140,0.1);
+  border-left-color: #8FA68C;
 }
 
 /* ── ADD-CERT rows ── */
@@ -531,7 +531,7 @@ body {
 
 /* ── INSIGHT + HONEST callouts ── */
 .insight { transition: background 0.25s, border-left-color 0.25s, transform 0.22s; cursor: default; }
-.insight:hover { background: #DDEEFF; border-left-color: var(--blue2); transform: translateX(4px); }
+.insight:hover { background: #EAE6DE; border-left-color: #A0896A; transform: translateX(4px); }
 .honest { transition: background 0.25s, transform 0.22s; cursor: default; }
 .honest:hover { background: #FEF7E0; transform: translateX(4px); }
 
