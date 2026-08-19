@@ -323,6 +323,230 @@ details.acc[open] .acc-arrow { transform: rotate(180deg); background: #EFF6FF; c
   .outcomes-row         { grid-template-columns: 1fr; }
   .pitch                { padding: 32px 28px; }
 }
+
+/* ══════════ 3D · EMBOSS · HOVER SYSTEM ══════════ */
+
+/* Richer page background */
+body {
+  background: linear-gradient(155deg, #E8EEF8 0%, #EEF2F7 45%, #E6EFFC 100%);
+  min-height: 100vh;
+}
+
+/* ── CARDS — 3D lift ── */
+.card {
+  border: 1px solid rgba(213,222,236,0.9);
+  border-bottom-color: #C8D3E4;
+  border-right-color: #D0D9E8;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.95) inset,
+    0 2px 6px rgba(0,0,0,0.05),
+    0 8px 28px rgba(0,0,0,0.07),
+    0 1px 3px rgba(0,0,0,0.04);
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+.card:hover {
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.95) inset,
+    0 4px 12px rgba(0,0,0,0.06),
+    0 18px 52px rgba(27,79,216,0.11),
+    0 2px 6px rgba(0,0,0,0.05);
+  transform: translateY(-3px);
+}
+
+/* ── CARD HEADERS — embossed gradient ── */
+.card-header {
+  background: linear-gradient(135deg, #FFFFFF 0%, #EEF4FF 100%);
+  box-shadow: 0 1px 0 rgba(255,255,255,1) inset, 0 2px 5px rgba(0,0,0,0.03);
+}
+
+/* ── CARD ICONS — embossed bubble ── */
+.card-icon {
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.85) inset,
+    0 2px 8px rgba(0,0,0,0.13),
+    0 0 0 1px rgba(0,0,0,0.04) inset;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.card:hover .card-icon {
+  transform: scale(1.1) rotate(-4deg);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.85) inset,
+    0 5px 14px rgba(0,0,0,0.2),
+    0 0 0 1px rgba(0,0,0,0.04) inset;
+}
+.ci-blue   { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); }
+.ci-teal   { background: linear-gradient(135deg, #F0FDFA, #CCFBF1); }
+.ci-purple { background: linear-gradient(135deg, #F5F3FF, #EDE9FE); }
+.ci-gold   { background: linear-gradient(135deg, #FFFBEB, #FEF3C7); }
+.ci-green  { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); }
+.ci-navy   { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); }
+
+/* ── ACCORDION — 3D depth + hover ── */
+details.acc {
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.9) inset,
+    0 2px 8px rgba(0,0,0,0.05),
+    0 4px 16px rgba(0,0,0,0.04);
+  transition: box-shadow 0.3s, border-color 0.25s, transform 0.25s;
+}
+details.acc:not([open]):hover {
+  border-color: #A5C0F5;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.9) inset,
+    0 4px 18px rgba(27,79,216,0.1),
+    0 8px 28px rgba(0,0,0,0.05);
+  transform: translateY(-2px);
+}
+details.acc[open] {
+  border-color: #93BFFD;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.9) inset,
+    0 6px 28px rgba(27,79,216,0.13),
+    0 2px 8px rgba(0,0,0,0.05);
+}
+.acc-num {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ── PM-LIST rows — pastel hover ── */
+.pm-list li {
+  border-radius: 8px;
+  padding: 10px 10px 10px 10px;
+  margin: 0 -8px;
+  transition: background 0.22s, border-bottom-color 0.22s;
+  cursor: default;
+}
+.pm-list li:hover {
+  background: linear-gradient(90deg, rgba(99,102,241,0.07) 0%, rgba(59,130,246,0.04) 100%);
+  border-bottom-color: transparent;
+}
+
+/* ── CASE CARDS — slide + glow hover ── */
+.case {
+  transition: box-shadow 0.25s, transform 0.25s, background 0.25s, border-left-color 0.25s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.case:hover {
+  background: #F0F7FF;
+  border-left-color: #3B82F6;
+  box-shadow: 0 4px 20px rgba(27,79,216,0.12), 4px 0 0 rgba(59,130,246,0.15);
+  transform: translateX(4px);
+}
+
+/* ── PANEL LIST rows — hover ── */
+.panel-list li {
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin: 0 -10px;
+  transition: background 0.22s, padding-left 0.22s;
+  cursor: default;
+}
+.panel-list li:hover {
+  padding-left: 16px;
+  background: rgba(59,130,246,0.08);
+}
+.grows .panel-list li:hover {
+  background: rgba(5,150,105,0.08);
+}
+.panel.brings {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.95) inset, 0 4px 20px rgba(27,79,216,0.08);
+}
+.panel.grows {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.95) inset, 0 4px 20px rgba(5,150,105,0.08);
+}
+
+/* ── PILLAR CARDS — hover lift ── */
+.pillar-card {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 2px 10px rgba(0,0,0,0.06);
+  transition: box-shadow 0.25s, transform 0.25s, background 0.25s;
+}
+.pillar-card:hover {
+  background: #F5F8FF;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 8px 24px rgba(0,0,0,0.1);
+  transform: translateX(5px);
+}
+
+/* ── KPI CARDS — 3D hover ── */
+.kpi-card {
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.95) inset,
+    0 3px 12px rgba(0,0,0,0.07),
+    0 1px 4px rgba(0,0,0,0.05);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.kpi-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.95) inset,
+    0 10px 32px rgba(0,0,0,0.11),
+    0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* ── CAREER CARDS — 3D hover ── */
+.tl-card {
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.95) inset,
+    0 3px 12px rgba(0,0,0,0.06),
+    0 1px 4px rgba(0,0,0,0.04);
+}
+.tl-card:hover {
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.95) inset,
+    0 10px 32px rgba(27,79,216,0.13),
+    0 2px 8px rgba(0,0,0,0.06);
+  transform: translateY(-4px);
+}
+.tl-pts li {
+  border-radius: 6px;
+  padding-left: 20px;
+  transition: background 0.2s, padding-left 0.2s;
+  cursor: default;
+}
+.tl-pts li:hover {
+  background: rgba(59,130,246,0.06);
+  padding-left: 24px;
+}
+.tl-card.current .tl-pts li:hover {
+  background: rgba(5,150,105,0.06);
+}
+
+/* ── ADD-CERT rows — hover ── */
+.add-cert {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 2px 6px rgba(0,0,0,0.05);
+  transition: border-color 0.2s, background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.add-cert:hover {
+  transform: translateX(4px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 5px 18px rgba(5,150,105,0.12);
+  border-color: #6EE7B7;
+  background: #F0FDF4;
+}
+
+/* ── CERT IMAGES — 3D hover ── */
+.cert-img-wrap {
+  box-shadow: 0 4px 18px rgba(0,0,0,0.13), 0 1px 4px rgba(0,0,0,0.08);
+}
+.cert-img-wrap:hover {
+  box-shadow: 0 12px 36px rgba(0,0,0,0.22), 0 2px 8px rgba(0,0,0,0.1);
+  transform: translateY(-3px) scale(1.01);
+}
+
+/* ── INSIGHT + HONEST callouts — hover ── */
+.insight { transition: background 0.25s, border-left-color 0.25s; cursor: default; }
+.insight:hover { background: #E0EEFF; border-left-color: var(--blue2); }
+.honest { transition: background 0.25s; cursor: default; }
+.honest:hover { background: #FEF9E7; }
+
+/* ── OUTCOMES oc-cards ── */
+.oc {
+  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 2px 8px rgba(5,150,105,0.08);
+  transition: transform 0.22s, box-shadow 0.22s;
+  cursor: default;
+}
+.oc:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 8px 22px rgba(5,150,105,0.15);
+}
 </style>
 </head>
 <body>
