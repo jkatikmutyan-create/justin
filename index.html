@@ -173,6 +173,24 @@ details.acc[open] .acc-arrow { transform: rotate(180deg); background: #EFF6FF; c
 .oc { background: var(--greenlt); border: 1px solid #6EE7B7; border-top: 2px solid var(--green); border-radius: 8px; padding: 11px 13px; }
 .oc-name { font-size: 10px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
 .oc-text { font-size: 12px; color: #065F46; line-height: 1.5; }
+/* KPI trend table */
+.kpi-table { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 12px 0; }
+.kpi-table thead th { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--muted); padding: 5px 10px; border-bottom: 2px solid var(--border); text-align: left; }
+.kpi-table thead th:not(:first-child) { text-align: center; }
+.kpi-table tbody tr { border-bottom: 1px solid #F1F5F9; }
+.kpi-table tbody tr:last-child { border-bottom: none; }
+.kpi-table td { padding: 9px 10px; color: var(--slate); vertical-align: middle; }
+.kpi-table td:not(:first-child) { text-align: center; }
+.kpi-table .kpi-label { font-weight: 600; color: var(--ink); }
+.kpi-table .kpi-goal { color: var(--muted); font-size: 11.5px; }
+.kpi-val { font-weight: 700; font-size: 13.5px; }
+.kpi-beat { color: #059669; }
+.kpi-trend-up { color: #059669; font-weight: 700; }
+.kpi-trend-down-good { color: #059669; font-weight: 700; }
+.kpi-trend-neutral { color: var(--muted); }
+.kpi-chip { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 100px; }
+.chip-green { background: #D1FAE5; color: #065F46; }
+.chip-amber { background: #FEF3C7; color: #92400E; }
 
 /* ══════════ CERTIFICATIONS (SIDEBAR IN GRID) ══════════ */
 .cert-img-wrap { position: relative; overflow: hidden; border-radius: 10px; box-shadow: 0 3px 16px rgba(0,0,0,0.1); margin-bottom: 14px; transition: transform 0.3s, box-shadow 0.3s; border: 1px solid var(--border); cursor: zoom-in; }
@@ -462,22 +480,78 @@ details.acc[open] .acc-arrow { transform: rotate(180deg); background: #EFF6FF; c
             <div class="acc-num">4</div>
             <div class="acc-head">
               <div class="acc-title">Operational Analytics &amp; Metrics-Driven Leadership</div>
-              <div class="acc-sub">CSAT 4.64 · Productivity 109% · SLO 0% breach · Omni 95% · $36M+ renewals</div>
+              <div class="acc-sub">H1 FY27 AMER Field Service · All 4 core KPIs at or above goal · Q1→Q2 improvement across TTR &amp; Esc%</div>
             </div>
             <div class="acc-badge b-green">Results Proven</div>
             <div class="acc-arrow">▾</div>
           </summary>
           <div class="acc-body">
-            <p class="intro-p">I own a weekly operational metrics framework — not a dashboard I read, but a cadence I designed, defined, and defend in front of senior leadership every week. Prior to Salesforce, I led a 53-member organisation at Dell across voice, chat, email, and back-office with full vendor accountability and P&amp;L-adjacent ownership.</p>
-            <div class="outcomes-row">
-              <div class="oc"><div class="oc-name">CSAT</div><div class="oc-text">4.64 / 5.00 · Above-goal · Measured weekly</div></div>
-              <div class="oc"><div class="oc-name">Productivity</div><div class="oc-text">109% of target · Consistent above-plan throughput</div></div>
-              <div class="oc"><div class="oc-name">SLO Compliance</div><div class="oc-text">0% SLO breaches · Escalation rate 2.9%</div></div>
-              <div class="oc"><div class="oc-name">Omni Adoption</div><div class="oc-text">95% · Channel shift driven operationally</div></div>
-              <div class="oc"><div class="oc-name">Renewal Impact</div><div class="oc-text">$36M+ protected across 3 named enterprise accounts</div></div>
-              <div class="oc"><div class="oc-name">TTR &amp; BPE</div><div class="oc-text">Time-to-Resolve and Backlog tracked weekly · Above target</div></div>
-            </div>
-            <div class="insight">I do not manage to effort. I define the outcome first, then build the framework around it. CSAT, TTR, SLO, Escalation %, Omni Adoption, Throughput, Backlog, Chat metrics, Swarm KPIs, certification compliance — all tracked weekly. That operating discipline is directly transferable to PM metrics ownership.</div>
+            <p class="intro-p">I own a weekly operational metrics framework — not a dashboard I read, but a cadence I designed, defined, and defend in front of senior leadership every week. The table below is live AMER Field Service H1 FY27 performance data: goal vs actual, with Q1→Q2 trajectory. Every metric tells a story about resource allocation, customer retention, and operational discipline — and I know how to read and act on all of them.</p>
+
+            <table class="kpi-table">
+              <thead>
+                <tr>
+                  <th>KPI</th>
+                  <th>Goal</th>
+                  <th>FY27 Q1</th>
+                  <th>FY27 Q2</th>
+                  <th>Trend</th>
+                  <th>vs Goal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="kpi-label">CSAT</span><br/><span style="font-size:11px;color:var(--muted)">Customer satisfaction · retention signal</span></td>
+                  <td class="kpi-goal">≥ 4.70</td>
+                  <td><span class="kpi-val kpi-beat">4.76</span></td>
+                  <td><span class="kpi-val kpi-beat">4.70</span></td>
+                  <td><span class="kpi-trend-neutral">→ Stable</span></td>
+                  <td><span class="kpi-chip chip-green">✓ At Goal</span></td>
+                </tr>
+                <tr>
+                  <td><span class="kpi-label">TTR</span><br/><span style="font-size:11px;color:var(--muted)">Time-to-Resolve · resource efficiency</span></td>
+                  <td class="kpi-goal">&lt; 7.0 days</td>
+                  <td><span class="kpi-val kpi-beat">6.01</span></td>
+                  <td><span class="kpi-val kpi-beat">5.15</span></td>
+                  <td><span class="kpi-trend-down-good">↓ −0.86 days</span></td>
+                  <td><span class="kpi-chip chip-green">✓ Beat Goal</span></td>
+                </tr>
+                <tr>
+                  <td><span class="kpi-label">Escalation %</span><br/><span style="font-size:11px;color:var(--muted)">Customer effort &amp; risk indicator</span></td>
+                  <td class="kpi-goal">&lt; 1.5%</td>
+                  <td><span class="kpi-val kpi-beat">1.18%</span></td>
+                  <td><span class="kpi-val kpi-beat">0.72%</span></td>
+                  <td><span class="kpi-trend-down-good">↓ −0.46pp</span></td>
+                  <td><span class="kpi-chip chip-green">✓ Beat Goal</span></td>
+                </tr>
+                <tr>
+                  <td><span class="kpi-label">SLO Miss %</span><br/><span style="font-size:11px;color:var(--muted)">Commitment compliance</span></td>
+                  <td class="kpi-goal">&lt; 1.0%</td>
+                  <td><span class="kpi-val kpi-beat">0%</span></td>
+                  <td><span class="kpi-val kpi-beat">0.1%</span></td>
+                  <td><span class="kpi-trend-neutral">→ Negligible</span></td>
+                  <td><span class="kpi-chip chip-green">✓ Beat Goal</span></td>
+                </tr>
+                <tr>
+                  <td><span class="kpi-label">Inflow vs Closures</span><br/><span style="font-size:11px;color:var(--muted)">Backlog health &amp; throughput</span></td>
+                  <td class="kpi-goal">Closures ≥ Inflow</td>
+                  <td><span class="kpi-val kpi-beat">1,520 in</span></td>
+                  <td><span class="kpi-val kpi-beat">1,676 in · 3,234 closed</span></td>
+                  <td><span class="kpi-trend-down-good">↑ Closures outpacing inflow</span></td>
+                  <td><span class="kpi-chip chip-green">✓ Beat Goal</span></td>
+                </tr>
+                <tr>
+                  <td><span class="kpi-label">Repeat Rate (RR%)</span><br/><span style="font-size:11px;color:var(--muted)">Resolution quality · customer re-contact</span></td>
+                  <td class="kpi-goal">Downward trend</td>
+                  <td><span class="kpi-val kpi-beat">9.8%</span></td>
+                  <td><span class="kpi-val kpi-beat">9.6%</span></td>
+                  <td><span class="kpi-trend-down-good">↓ Improving</span></td>
+                  <td><span class="kpi-chip chip-green">✓ Trending Right</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="insight">Four core KPIs at or above goal. TTR improved by 0.86 days Q1→Q2. Escalation rate more than halved — 1.18% → 0.72% — well below the 1.5% threshold. Closures outpacing inflow. These are not inherited numbers; they reflect deliberate resource allocation, coaching investment, and a weekly operating cadence that keeps the team accountable to outcomes, not activity. That analytical discipline is directly transferable to PM metrics ownership.</div>
           </div>
         </details>
 
