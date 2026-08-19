@@ -143,6 +143,8 @@ details.acc[open] .acc-num { background: var(--blue); border-color: var(--blue);
 .b-blue   { background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; }
 .b-green  { background: #F0FDF4; color: #15803D; border: 1px solid #BBF7D0; }
 .b-purple { background: #F5F3FF; color: #6D28D9; border: 1px solid #DDD6FE; }
+.b-orange { background: #FFF7ED; color: #C2410C; border: 1px solid #FED7AA; }
+.b-teal   { background: #F0FDFA; color: #0F766E; border: 1px solid #99F6E4; }
 .acc-arrow { width: 24px; height: 24px; border-radius: 6px; background: #F1F5F9; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 10px; transition: transform 0.25s, background 0.2s, color 0.2s; flex-shrink: 0; }
 details.acc[open] .acc-arrow { transform: rotate(180deg); background: #EFF6FF; color: var(--blue); }
 .acc-body { padding: 0 20px 20px; border-top: 1px solid var(--border); padding-top: 18px; animation: slideIn 0.2s ease; }
@@ -341,8 +343,8 @@ details.acc[open] .acc-arrow { transform: rotate(180deg); background: #EFF6FF; c
     <div class="card-header">
       <div class="card-icon ci-blue">⚡</div>
       <div>
-        <div class="card-title">Five Strengths Reframed for Product Management</div>
-        <div class="card-sub">Click each strength to expand the evidence</div>
+        <div class="card-title">Seven Strengths — Evidence-Based, Not Claimed</div>
+        <div class="card-sub">Click each strength to expand the documented evidence</div>
       </div>
     </div>
     <div class="card-body">
@@ -353,13 +355,13 @@ details.acc[open] .acc-arrow { transform: rotate(180deg); background: #EFF6FF; c
             <div class="acc-num">1</div>
             <div class="acc-head">
               <div class="acc-title">Voice of Customer — Lived, Not Surveyed</div>
-              <div class="acc-sub">Three Sev1 escalations · 1,435-account adoption programme · $36M+ renewal outcomes</div>
+              <div class="acc-sub">$36M+ renewal outcomes · 1,435-account adoption programme · Three enterprise Sev1s closed</div>
             </div>
             <div class="acc-badge b-gold">PM Superpower</div>
             <div class="acc-arrow">▾</div>
           </summary>
           <div class="acc-body">
-            <p class="intro-p">Most PMs access customer insight through NPS dashboards and quarterly surveys. For three years I have been the customer's direct representative inside Salesforce engineering discussions — in real time, under pressure, with renewal dollars on the line.</p>
+            <p class="intro-p">Most PMs access customer insight through NPS dashboards and quarterly surveys. For three years I have been the customer's direct representative inside Salesforce Engineering discussions — in real time, under pressure, with renewal dollars on the line. Every case below is not a ticket I managed; it is a product decision I influenced.</p>
             <div class="cases">
               <div class="case">
                 <div class="case-top"><div class="case-co">Bank of Nova Scotia · Case 473442710</div><div class="case-pill">$30M Renewal</div></div>
@@ -380,13 +382,13 @@ details.acc[open] .acc-arrow { transform: rotate(180deg); background: #EFF6FF; c
                 <div class="case-result">✓ Go-live enabled · $6.8M secured · 90%+ performance improvement</div>
               </div>
               <div class="case">
-                <div class="case-top"><div class="case-co">North America Proactive Adoption Programme</div><div class="case-pill">1,435 Accounts</div></div>
-                <div class="case-prod">SFS · Service Cloud Digital Engagement · AMER</div>
-                <div class="case-text">Led a structured outreach initiative across 1,435 North America accounts in partnership with AEs, CSMs, Product, and Engineering — identifying adoption blockers, surfacing product gaps, and coordinating response plans before issues escalated to support. This programme converted reactive case volume into proactive product intelligence.</div>
-                <div class="case-result">✓ Adoption gaps identified and actioned across AMER · Cross-functional AE/CSM/Engineering coordination</div>
+                <div class="case-top"><div class="case-co">North America FSL Adoption Programme · AMER Operations</div><div class="case-pill">1,435 Accounts</div></div>
+                <div class="case-prod">FSL Premier/Signature · Proactive Outreach · AE/CSM/Success Guide Coordination</div>
+                <div class="case-text">Designed and executed a structured proactive outreach programme across 1,435 Premier and Signature FSL accounts in North America. Personally conducted DM-level engagement with 15+ individual AEs and CSMs (Employsure, AGI, Nichiha, McNichols, Irvine, SILCO, Tosoh, Axel Springer, Roseburg, Border States, Bayer, Korsch, EnerSys and others) to identify accounts with no Success Guide engagement in 12+ months. Ran weekly programme reviews with senior field and product leadership, tracked funnel metrics (1,435 accounts in funnel, 43 outreach completions, 70% initial touch completed), chased blockers, and coordinated follow-ups with Phani, Dinesh, Pramod, and Reghan.</div>
+                <div class="case-result">✓ 43 adoption engagements completed · 70% funnel initial-touch hit · Repeatable playbook created · VoC pipeline established upstream of support</div>
               </div>
             </div>
-            <div class="insight">I do not need to build a feedback loop. I have been running one — with receipts. At 1,435 accounts and counting.</div>
+            <div class="insight">Most PMs have to build a VoC feedback loop. I have been operating one — across three Sev1s, 1,435 accounts, and 15+ AE/CSM relationships — with receipts, metrics, and named outcomes.</div>
           </div>
         </details>
 
@@ -394,26 +396,24 @@ details.acc[open] .acc-arrow { transform: rotate(180deg); background: #EFF6FF; c
           <summary>
             <div class="acc-num">2</div>
             <div class="acc-head">
-              <div class="acc-title">PM Judgment Already Demonstrated in Practice</div>
-              <div class="acc-sub">Engineering decisions changed · Fix strategies shaped · Sev1 brief discipline</div>
+              <div class="acc-title">Product-to-Engineering Pipeline — Judgment That Changed Decisions</div>
+              <div class="acc-sub">Priority classifications reversed · Fix strategies redesigned · Backport timelines driven</div>
             </div>
             <div class="acc-badge b-cyan">Already Doing It</div>
             <div class="acc-arrow">▾</div>
           </summary>
           <div class="acc-body">
-            <p class="intro-p">Across these escalations I did not simply relay customer pain — I exercised product-level judgment that directly changed engineering decisions.</p>
+            <p class="intro-p">I did not relay customer pain upward — I structured it, framed it commercially, and drove engineering to a different decision. Every bullet below is a documented outcome, not an aspiration.</p>
             <ul class="pm-list">
-              <li><div class="pm-dot">→</div><div><strong>Challenged a P3 engineering priority</strong> on a $30M renewal account — coordinated with Sr Director TSE. The priority was changed.</div></li>
-              <li><div class="pm-dot">→</div><div><strong>Rejected engineering's sole-path LWC workaround</strong> — argued the customer could not test across all flows. Engineering adopted a dual-track strategy instead.</div></li>
-              <li><div class="pm-dot">→</div><div><strong>Identified undocumented product behaviour</strong> in SFS Global Optimization — drove engineering to update product documentation.</div></li>
-              <li><div class="pm-dot">→</div><div><strong>Challenged a "Fixed" GUS item with no evidence</strong> — pushed engineering leadership for a comment summary before accepting resolution status.</div></li>
-              <li><div class="pm-dot">→</div><div><strong>Designed structured investigation channel architecture</strong> — separated hypothesis threads from main escalation to improve cross-team clarity.</div></li>
-              <li><div class="pm-dot">→</div><div><strong>Formally documented performance testing requirements</strong> — 40 survey forms, 3,000–4,000 records — ensuring engineering understood real-world load expectations.</div></li>
-              <li><div class="pm-dot">→</div><div><strong>Authored structured Sev1 engineering briefs</strong> — separating hypothesis threads from escalation channels, building a discipline cross-functional leads (AE, Engineering, CSM) now rely on for context continuity.</div></li>
-              <li><div class="pm-dot">→</div><div><strong>Quantified fix trade-offs in engineer-readable terms</strong> — framed DE bug prioritisation by effort, customer-dollar impact, and time-to-resolution to drive decisions across competing backlogs.</div></li>
-              <li><div class="pm-dot">→</div><div><strong>Advocated Deep Linking product gap from customer VoC</strong> — translated repeated support signal into a documented product requirement raised with Product leadership.</div></li>
+              <li><div class="pm-dot">→</div><div><strong>Reversed a P3 engineering priority classification</strong> on Bank of Nova Scotia ($30M renewal) — coordinated with Sr Director TSE with business impact framing. Engineering changed the priority. Fix shipped in Release 262.9.2.</div></li>
+              <li><div class="pm-dot">→</div><div><strong>Blocked a sole-path workaround</strong> on the same account — challenged engineering's proposed LWC-only fix on the grounds that the customer could not safely test across all production flows. Engineering adopted a dual-track strategy (LWC workaround + permanent Aura fix in parallel).</div></li>
+              <li><div class="pm-dot">→</div><div><strong>Authored the full structured brief for SCE InspectForce 2.0</strong> — problem statement, short-term fix path, long-term fix (Release 260.1), expected outcomes, and production-scale test requirements (40 forms, 3,000–4,000 records). Engineering validated under those conditions. $6.8M secured.</div></li>
+              <li><div class="pm-dot">→</div><div><strong>Structured the complete path forward on the US Medical Management DE bug (W-19244947)</strong> — defined workaround option, escalation trigger conditions, and the specific effort/dollar/time data points Engineering needed to justify prioritisation. Directly chased backport ETA with the engineering owner.</div></li>
+              <li><div class="pm-dot">→</div><div><strong>Pushed back on a "working as designed" classification via VoC framing</strong> — on the Deep Linking gap, challenged the engineering position by surfacing customer-impact evidence and explicitly asking: "If impact is high, should Engineering evaluate this from the customer angle? Do we have VoC to support that?" Requirement escalated to Product leadership.</div></li>
+              <li><div class="pm-dot">→</div><div><strong>Drove a "Fixed" GUS item back into engineering review</strong> — refused to accept resolution status without a documented comment summary from engineering leadership. Item re-evaluated.</div></li>
+              <li><div class="pm-dot">→</div><div><strong>Coordinated Australian Unity Sev1 across AMER/APAC/EMEA follow-the-sun</strong> — identified Android Device ID issue, framed go-live urgency (10 → 200 users in 6 days), ran cross-timezone internal bridge and drove engineering to an urgent verdict.</div></li>
             </ul>
-            <div class="insight">This is product management without the title. I need the authority to match the judgment I already have.</div>
+            <div class="insight">This is product management without the title. The judgment is already proven — I am seeking the authority and scope to apply it upstream, in the roadmap, before it reaches a support queue.</div>
           </div>
         </details>
 
@@ -421,14 +421,14 @@ details.acc[open] .acc-arrow { transform: rotate(180deg); background: #EFF6FF; c
           <summary>
             <div class="acc-num">3</div>
             <div class="acc-head">
-              <div class="acc-title">Field Service Product Familiarity — Aware &amp; Engaged</div>
-              <div class="acc-sub">SFS Scheduler · SFS Mobile iOS · SFS Global Optimization · Agentforce Field Service</div>
+              <div class="acc-title">Field Service &amp; Agentforce Domain Fluency — Earned, Not Studied</div>
+              <div class="acc-sub">Full SFS product suite · Agentforce Field Service · 100% team Innovator certification</div>
             </div>
-            <div class="acc-badge b-blue">Domain Aware</div>
+            <div class="acc-badge b-blue">Domain Fluent</div>
             <div class="acc-arrow">▾</div>
           </summary>
           <div class="acc-body">
-            <p class="intro-p">Three years of AMER escalation work across the full Field Service product suite:</p>
+            <p class="intro-p">Three years of enterprise escalation leadership across the full Field Service product suite — combined with active investment in Agentforce enablement and the AI-first product agenda. This is not classroom knowledge; it is working fluency built under commercial pressure.</p>
             <div class="tags">
               <span class="tag">SFS Scheduler · Aura/LWC</span>
               <span class="tag">Engagement Channel Type</span>
@@ -443,11 +443,17 @@ details.acc[open] .acc-arrow { transform: rotate(180deg); background: #EFF6FF; c
               <span class="tag">SC Digital Engagement · Bots · AI</span>
               <span class="tag">MIAW · Service Cloud Voice</span>
               <span class="tag">Agentforce Field Service</span>
+              <span class="tag">Post-Work Summary Agent</span>
               <span class="tag">Asset Service Management</span>
               <span class="tag">SFS Mobile Android</span>
               <span class="tag">MDM · SSO · Mobile Deployment</span>
             </div>
-            <div class="honest"><strong>Honest framing:</strong> I do not claim deep technical product ownership. What I bring is working knowledge of customer-facing product behaviour, established engineering relationships, the ability to translate support volume patterns into product gap hypotheses — and genuine curiosity about where Agentforce and the AI-first agenda is taking Field Service next.</div>
+            <ul class="pm-list" style="margin-top:12px">
+              <li><div class="pm-dot">→</div><div><strong>Agentforce Field Service — customer implementation unblocked</strong> (Case 472524559): directly engaged the Agentforce FS enablement team to resolve a customer trying to implement the Post-Work Summary agent feature. Acted as the bridge between customer intent and product capability.</div></li>
+              <li><div class="pm-dot">→</div><div><strong>100% Agentforce Innovator certification across team</strong> — drove team-wide completion of Agentforce Innovator; team reached 5 Agentforce Legend completions. Not a compliance exercise — a strategic signal to leadership on AI-readiness posture.</div></li>
+              <li><div class="pm-dot">→</div><div><strong>Active on release-readiness enablement</strong> — participated in Release Ready Manager Enablement (254, AMER/APAC/EMEA), Bi-Weekly SFS Managers Connect, FSL Mobile Office Hours, and FSL CCE Office Hours — maintaining real-time product fluency ahead of each release cycle.</div></li>
+            </ul>
+            <div class="honest"><strong>Honest framing:</strong> I do not claim deep technical product ownership. What I bring is customer-validated working knowledge of Field Service product behaviour, direct Engineering relationships, the ability to map support patterns to product gaps — and demonstrated investment in where Agentforce is taking Field Service next.</div>
           </div>
         </details>
 
@@ -455,23 +461,23 @@ details.acc[open] .acc-arrow { transform: rotate(180deg); background: #EFF6FF; c
           <summary>
             <div class="acc-num">4</div>
             <div class="acc-head">
-              <div class="acc-title">Metrics-Driven Leadership — Outcomes, Not Outputs</div>
-              <div class="acc-sub">Above-goal KPIs · $36M+ renewal protection · 53-member team</div>
+              <div class="acc-title">Operational Analytics &amp; Metrics-Driven Leadership</div>
+              <div class="acc-sub">CSAT 4.64 · Productivity 109% · SLO 0% breach · Omni 95% · $36M+ renewals</div>
             </div>
             <div class="acc-badge b-green">Results Proven</div>
             <div class="acc-arrow">▾</div>
           </summary>
           <div class="acc-body">
-            <p class="intro-p">Consistent above-goal achievement of business and operational KPIs across AMER support operations. Prior to Salesforce, I managed a 53-member organisation at Dell spanning voice, chat, email, and back-office with full vendor accountability.</p>
+            <p class="intro-p">I own a weekly operational metrics framework — not a dashboard I read, but a cadence I designed, defined, and defend in front of senior leadership every week. Prior to Salesforce, I led a 53-member organisation at Dell across voice, chat, email, and back-office with full vendor accountability and P&amp;L-adjacent ownership.</p>
             <div class="outcomes-row">
-              <div class="oc"><div class="oc-name">Bank of Nova Scotia</div><div class="oc-text">$30M renewal protected within release window</div></div>
-              <div class="oc"><div class="oc-name">Access TeleCare</div><div class="oc-text">Red Account closed · Fix validated on sandbox</div></div>
-              <div class="oc"><div class="oc-name">Southern California Edison</div><div class="oc-text">$6.8M secured · 90%+ performance improvement</div></div>
-              <div class="oc"><div class="oc-name">Team CSAT</div><div class="oc-text">4.64 / 5.00 · Above-goal team satisfaction score</div></div>
+              <div class="oc"><div class="oc-name">CSAT</div><div class="oc-text">4.64 / 5.00 · Above-goal · Measured weekly</div></div>
               <div class="oc"><div class="oc-name">Productivity</div><div class="oc-text">109% of target · Consistent above-plan throughput</div></div>
-              <div class="oc"><div class="oc-name">SLO Compliance</div><div class="oc-text">0% SLO breaches · Escalation rate held at 2.9%</div></div>
+              <div class="oc"><div class="oc-name">SLO Compliance</div><div class="oc-text">0% SLO breaches · Escalation rate 2.9%</div></div>
+              <div class="oc"><div class="oc-name">Omni Adoption</div><div class="oc-text">95% · Channel shift driven operationally</div></div>
+              <div class="oc"><div class="oc-name">Renewal Impact</div><div class="oc-text">$36M+ protected across 3 named enterprise accounts</div></div>
+              <div class="oc"><div class="oc-name">TTR &amp; BPE</div><div class="oc-text">Time-to-Resolve and Backlog tracked weekly · Above target</div></div>
             </div>
-            <div class="insight">I do not manage to effort. I define the outcome first, then organise everything around achieving it. CSAT 4.64, Productivity 109%, zero SLO breaches — these are the numbers behind the narrative.</div>
+            <div class="insight">I do not manage to effort. I define the outcome first, then build the framework around it. CSAT, TTR, SLO, Escalation %, Omni Adoption, Throughput, Backlog, Chat metrics, Swarm KPIs, certification compliance — all tracked weekly. That operating discipline is directly transferable to PM metrics ownership.</div>
           </div>
         </details>
 
@@ -495,6 +501,51 @@ details.acc[open] .acc-arrow { transform: rotate(180deg); background: #EFF6FF; c
               <span class="tag">Azure Foundation</span>
               <span class="tag">Salesforce AI Innovator &amp; Champion</span>
             </div>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary>
+            <div class="acc-num">6</div>
+            <div class="acc-head">
+              <div class="acc-title">Cross-Functional Leadership — AE, CSM, Engineering, Product</div>
+              <div class="acc-sub">15+ individual AE/CSM account engagements · Global AMER/APAC/EMEA coordination</div>
+            </div>
+            <div class="acc-badge b-orange">Proven Collaborator</div>
+            <div class="acc-arrow">▾</div>
+          </summary>
+          <div class="acc-body">
+            <p class="intro-p">Cross-functional leadership is not a line on my CV — it is the operating model I run every week. The evidence below comes from named accounts, named individuals, and documented coordination outcomes — not generalised teamwork claims.</p>
+            <ul class="pm-list">
+              <li><div class="pm-dot">→</div><div><strong>1,435-account adoption programme — 15+ individual AE/CSM relationships activated</strong>: directly engaged named AEs (Lena Ellingboe, Julianne Webster, Olivia Stanziale, Julie-Anne Larose, Felix Hummel, Jens Fehrenbacher, Oran O'Donoghue, Samuel Alpert, Markus Muther, Andrea Hernandez) and named CSMs/Success Guides on individual account engagements — not a broadcast; a deliberate, account-level outreach discipline.</div></li>
+              <li><div class="pm-dot">→</div><div><strong>Purdy Motors — pre-call internal alignment before a single customer interaction</strong>: structured a 3-step internal coordination plan across AE, CSM, and Engineering before the first customer call was made. This is pre-sales coordination discipline — aligning the team on the narrative, the ask, and the escalation path in advance.</div></li>
+              <li><div class="pm-dot">→</div><div><strong>Australian Unity Sev1 — AMER/APAC/EMEA follow-the-sun coordination</strong>: orchestrated cross-timezone internal bridge calls, maintained continuity across shifts, and aligned Engineering, CSM, AE, and Customer Success on a single path forward under a live commercial deadline.</div></li>
+              <li><div class="pm-dot">→</div><div><strong>Weekly senior field leadership reviews</strong>: ran regular programme reviews with Phani, Dinesh, Pramod, and Reghan — tracking adoption funnel metrics, escalating blockers, and aligning field priorities to product availability.</div></li>
+              <li><div class="pm-dot">→</div><div><strong>Recurring cross-team calendar presence</strong>: SFS Managers Connect (bi-weekly), FSL Mobile &amp; CCE Office Hours, Release Ready Manager Enablement (AMER/APAC/EMEA) — maintaining real-time alignment with Product, Engineering, and Customer Success at a programme level.</div></li>
+            </ul>
+            <div class="insight">A PM who can already activate AE, CSM, Engineering, and Product in a coordinated motion — without the title — is a PM who will amplify, not learn, the cross-functional operating model from day one.</div>
+          </div>
+        </details>
+
+        <details class="acc">
+          <summary>
+            <div class="acc-num">7</div>
+            <div class="acc-head">
+              <div class="acc-title">Customer Expert Communication — Trusted Advisor at Executive Level</div>
+              <div class="acc-sub">Complex product behaviour translated clearly · Escalations turned to trust · VoC to Product pipeline</div>
+            </div>
+            <div class="acc-badge b-teal">Customer Advocate</div>
+            <div class="acc-arrow">▾</div>
+          </summary>
+          <div class="acc-body">
+            <p class="intro-p">Representing Salesforce as a product expert in customer interactions is not about knowing every API. It is about combining technical depth with empathy for business impact — and consistently turning pressure moments into trust-building outcomes. The evidence below is documented and named.</p>
+            <ul class="pm-list">
+              <li><div class="pm-dot">→</div><div><strong>WOLI / Master-Detail delete permissions — "working as designed" turned into a trust moment</strong>: received a customer challenge on expected platform behaviour. Acknowledged the concern as legitimate, explained the platform constraint clearly, provided three actionable options, and directed the customer to the Idea Exchange with explicit acknowledgement of their Premier+ status and voice weight. The response is a textbook example of product expert customer communication — transparent, empathetic, and commercially aware.</div></li>
+              <li><div class="pm-dot">→</div><div><strong>Medtronic — technical advisory at senior stakeholder level</strong>: led a customer call covering RAM behaviour, device performance, and priming thresholds for a product area with no published whitepaper on exact RAM requirements. Delivered a clear, technically credible position to senior stakeholders — becoming the trusted point of reference for undocumented product behaviour.</div></li>
+              <li><div class="pm-dot">→</div><div><strong>Southern California Edison — 5-hour joint customer call under live go-live pressure</strong>: led the call with CEO-visibility pressure, $6.8M at stake, and a $1B+ wildfire mitigation programme dependent on outcome. Delivered engineering clarity, set expectations precisely, and enabled go-live. Customer confirmed resolution.</div></li>
+              <li><div class="pm-dot">→</div><div><strong>Scalable process asset creation</strong>: authored structured engineering briefs, investigation channel frameworks, and adoption outreach templates — assets that are now reused across the team. Customer-facing communication was never ad hoc; it was documented, repeatable, and transferable.</div></li>
+            </ul>
+            <div class="insight">A great PM does not just collect customer feedback — they translate it with precision, advocate for it internally with data, and represent the product with credibility when sitting across from the customer. That capability is already operational.</div>
           </div>
         </details>
 
