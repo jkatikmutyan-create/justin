@@ -33,7 +33,7 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink
 ::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 3px; }
 
 /* ── PAGE ── */
-.page { max-width: 1060px; margin: 32px auto 64px; padding: 0 20px; }
+.page { max-width: 1200px; margin: 32px auto 64px; padding: 0 28px; }
 
 /* ══════════ HERO ══════════ */
 .hero {
@@ -125,6 +125,13 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink
 /* ══════════ SUMMARY ══════════ */
 .summary-intro p { font-size: 14.5px; color: var(--slate); line-height: 1.87; margin-bottom: 16px; }
 .summary-intro p:last-child { margin-bottom: 0; }
+/* lead sentence hook — first sentence of an intro paragraph */
+.lead { font-weight: 650; color: var(--ink); }
+/* inline metric callout — numbers/outcomes buried in prose */
+.m { font-weight: 700; color: var(--navy); letter-spacing: -0.2px; }
+/* intro-p strong boost */
+.intro-p strong { color: var(--ink); }
+.summary-intro p strong { color: var(--navy); }
 
 /* ══════════ ACCORDION ══════════ */
 .accordion { display: flex; flex-direction: column; gap: 10px; }
@@ -618,10 +625,10 @@ body {
   </div>
   <div class="card-body">
     <div class="summary-intro">
-      <p>I'm a customer support leader with 19+ years of hands-on experience across Technical Support Operations and Customer Experience — currently leading AMER business operations for Salesforce Field Service, with deep working fluency across <strong>Asset Service Management, Scheduling &amp; Optimization, and Mobile Workforce Management</strong> — the three core deployment domains where enterprise Field Service success is won or lost.</p>
-      <p>I haven't held a formal PM title, but the work I've been doing for the past nearly 4 years has pulled me deep into product thinking. Supporting complex enterprise customers at scale means I've had to get comfortable living in the gap between what customers experience and what Engineering understands — translating messy, real-world pain into clear, actionable problem statements; identifying undocumented product gaps before they become larger systemic issues; and working closely with Engineering to challenge severity classifications and shape fix strategies that actually got adopted.</p>
-      <p>Beyond escalation response, I have proactively driven adoption at scale — running a structured outreach programme across a 1,435-account North America funnel, personally engaging 150+ accounts in collaboration with AEs, CSMs, Product, and Engineering to surface adoption blockers before they became support tickets. That kind of cross-functional engagement — spanning Account Executives, Engineering leads, Product managers, and Customer Success — is where I have spent nearly 4 years finding leverage.</p>
-      <p>I don't come from PM. I come from the customer. And I think that's a different kind of foundation — one built on listening first, not shipping first.</p>
+      <p><span class="lead">I'm a customer support leader with 19+ years of hands-on experience across Technical Support Operations and Customer Experience</span> — currently leading AMER business operations for Salesforce Field Service, with deep working fluency across <strong>Asset Service Management, Scheduling &amp; Optimization, and Mobile Workforce Management</strong> — the three core deployment domains where enterprise Field Service success is won or lost.</p>
+      <p><span class="lead">I haven't held a formal PM title, but the work I've been doing for the past nearly 4 years has pulled me deep into product thinking.</span> Supporting complex enterprise customers at scale means I've had to get comfortable living in the gap between what customers experience and what Engineering understands — translating messy, real-world pain into clear, actionable problem statements; identifying undocumented product gaps before they become larger systemic issues; and working closely with Engineering to <strong>challenge severity classifications and shape fix strategies</strong> that actually got adopted.</p>
+      <p><span class="lead">Beyond escalation response, I have proactively driven adoption at scale</span> — running a structured outreach programme across a <span class="m">1,435-account</span> North America funnel, personally engaging <span class="m">150+ accounts</span> in collaboration with AEs, CSMs, Product, and Engineering to surface adoption blockers before they became support tickets. That kind of cross-functional engagement — spanning Account Executives, Engineering leads, Product managers, and Customer Success — is where I have spent nearly 4 years finding leverage.</p>
+      <p><span class="lead">I don't come from PM. I come from the customer.</span> And I think that's a different kind of foundation — one built on listening first, not shipping first.</p>
     </div>
   </div>
 </div>
@@ -652,30 +659,30 @@ body {
             <div class="acc-arrow">▾</div>
           </summary>
           <div class="acc-body">
-            <p class="intro-p">Most PMs build a VoC feedback loop. I have been operating one at two levels simultaneously — proactive adoption across a 1,435-account funnel with 150+ personally engaged, and real-time escalation intelligence under live commercial pressure. Every case below is not a ticket I managed; it is a product decision I influenced.</p>
+            <p class="intro-p"><span class="lead">Most PMs build a VoC feedback loop. I have been operating one at two levels simultaneously</span> — proactive adoption across a <span class="m">1,435-account funnel</span> with <span class="m">150+ personally engaged</span>, and real-time escalation intelligence under live commercial pressure. Every case below is not a ticket I managed; it is a <strong>product decision I influenced</strong>.</p>
             <div class="cases">
               <div class="case">
                 <div class="case-top"><div class="case-co">North America FSL Adoption Programme · AMER Operations</div><div class="case-pill">150+ Personally Engaged</div></div>
                 <div class="case-prod">FSL Premier/Signature · Proactive Outreach · AE/CSM/Success Guide Coordination</div>
-                <div class="case-text">Designed and executed a structured proactive outreach programme across 1,435 Premier and Signature FSL accounts in North America. Personally conducted DM-level engagement with 150+ individual AEs and CSMs (Employsure, AGI, Nichiha, McNichols, Irvine, SILCO, Tosoh, Axel Springer, Roseburg, Border States, Bayer, Korsch, EnerSys and others) to identify accounts with no Success Guide engagement in 12+ months. Ran weekly programme reviews with senior field and product leadership, tracked funnel metrics (1,435 accounts in funnel, 43 outreach completions, 70% initial touch completed), chased blockers, and coordinated follow-ups with Phani, Dinesh, Pramod, and Reghan.</div>
+                <div class="case-text"><span class="lead">Designed and executed a structured proactive outreach programme across <span class="m">1,435</span> Premier and Signature FSL accounts in North America.</span> Personally conducted DM-level engagement with <span class="m">150+ individual AEs and CSMs</span> (Employsure, AGI, Nichiha, McNichols, Irvine, SILCO, Tosoh, Axel Springer, Roseburg, Border States, Bayer, Korsch, EnerSys and others) to identify accounts with no Success Guide engagement in 12+ months. Ran weekly programme reviews with senior field and product leadership, tracked funnel metrics (<span class="m">1,435 accounts in funnel, 43 outreach completions, 70% initial touch completed</span>), chased blockers, and coordinated follow-ups with Phani, Dinesh, Pramod, and Reghan.</div>
                 <div class="case-result">✓ 43 adoption engagements completed · 70% funnel initial-touch hit · Enablement assets &amp; adoption playbooks created · Knowledge Articles published · VoC pipeline established upstream of support</div>
               </div>
               <div class="case">
                 <div class="case-top"><div class="case-co">Bank of Nova Scotia · Case 473442710</div><div class="case-pill">$30M Renewal</div></div>
                 <div class="case-prod">SFS Scheduler — Aura/LWC · Engagement Channel Type Bug</div>
-                <div class="case-text">My team identified the Select Service Appointment Time component was broken for customers using Engagement Channel Type without a Work Type Group ID. I challenged the P3 priority classification, escalated to engineering leadership via Sr Director TSE, and drove a dual-track fix strategy: interim LWC workaround in parallel with the permanent Aura fix. Fix: GUS W-22897038 → Release 262.9.2 + R2a Major Release (June 12–13).</div>
+                <div class="case-text"><span class="lead">My team identified the Select Service Appointment Time component was broken for customers using Engagement Channel Type without a Work Type Group ID.</span> I <strong>challenged the P3 priority classification</strong>, escalated to engineering leadership via Sr Director TSE, and drove a dual-track fix strategy: interim LWC workaround in parallel with the permanent Aura fix. Fix: <span class="m">GUS W-22897038 → Release 262.9.2 + R2a Major Release</span> (June 12–13).</div>
                 <div class="case-result">✓ Customer confirmed out of impact · $30M renewal protected</div>
               </div>
               <div class="case">
                 <div class="case-top"><div class="case-co">Access TeleCare · Case 473087660</div><div class="case-pill">Red Account</div></div>
                 <div class="case-prod">SFS Global Optimization / Dynamic Scaling · Undocumented Product Behaviour</div>
-                <div class="case-text">Dynamic Scaling was failing to assign Service Appointments due to a clustering issue. I identified a completely undocumented behaviour — the Custom Field Count Rule was causing Service Appointments to be skipped at end-of-day. Engineering agreed to update product documentation. Root fix confirmed on customer sandbox.</div>
+                <div class="case-text"><span class="lead">Dynamic Scaling was failing to assign Service Appointments due to a clustering issue.</span> I identified a <strong>completely undocumented behaviour</strong> — the Custom Field Count Rule was causing Service Appointments to be skipped at end-of-day. Engineering agreed to <strong>update product documentation</strong>. Root fix confirmed on customer sandbox.</div>
                 <div class="case-result">✓ Red Account officially closed</div>
               </div>
               <div class="case">
                 <div class="case-top"><div class="case-co">Southern California Edison · Cases 472696264 &amp; 472907022</div><div class="case-pill">$6.8M · CEO Visibility</div></div>
                 <div class="case-prod">SFS Mobile iOS Offline Mode · $1B+ Wildfire Mitigation Coverage</div>
-                <div class="case-text">SFS Mobile iOS was crashing on Pending Upload queue overflow — blocking InspectForce 2.0 go-live. I proactively treated a Sev2 as Sev1 urgency, identified two distinct engineering issues, formally documented SCE's performance testing requirements (40 survey forms, 3,000–4,000 records), and led a 5-hour joint customer call enabling go-live. Long-term fix delivered in Release 260.1 (GA: March 4, 2026).</div>
+                <div class="case-text"><span class="lead">SFS Mobile iOS was crashing on Pending Upload queue overflow — blocking InspectForce 2.0 go-live.</span> I proactively <strong>treated a Sev2 as Sev1 urgency</strong>, identified two distinct engineering issues, formally documented SCE's performance testing requirements (<span class="m">40 survey forms, 3,000–4,000 records</span>), and led a <span class="m">5-hour joint customer call</span> enabling go-live. Long-term fix delivered in <span class="m">Release 260.1</span> (GA: March 4, 2026).</div>
                 <div class="case-result">✓ Go-live enabled · $6.8M secured · 90%+ performance improvement</div>
               </div>
             </div>
@@ -694,7 +701,7 @@ body {
             <div class="acc-arrow">▾</div>
           </summary>
           <div class="acc-body">
-            <p class="intro-p">I did not relay customer pain upward — I structured it, framed it commercially, and drove engineering to a different decision. Every bullet below is a documented outcome, not an aspiration.</p>
+            <p class="intro-p"><span class="lead">I did not relay customer pain upward — I structured it, framed it commercially, and drove engineering to a different decision.</span> Every bullet below is a documented outcome, not an aspiration.</p>
             <ul class="pm-list">
               <li><div class="pm-dot">→</div><div><strong>Reversed a P3 engineering priority classification</strong> on Bank of Nova Scotia ($30M renewal) — coordinated with Sr Director TSE with business impact framing. Engineering changed the priority. Fix shipped in Release 262.9.2.</div></li>
               <li><div class="pm-dot">→</div><div><strong>Blocked a sole-path workaround</strong> on the same account — challenged engineering's proposed LWC-only fix on the grounds that the customer could not safely test across all production flows. Engineering adopted a dual-track strategy (LWC workaround + permanent Aura fix in parallel).</div></li>
@@ -719,7 +726,7 @@ body {
             <div class="acc-arrow">▾</div>
           </summary>
           <div class="acc-body">
-            <p class="intro-p">Nearly 4 years of enterprise escalation leadership across the full Field Service product suite — Asset Service Management, Scheduling &amp; Optimization, and Mobile Workforce — combined with active investment in Agentforce enablement and the AI-first product agenda. This is not classroom knowledge; it is working fluency built under commercial pressure.</p>
+            <p class="intro-p"><span class="lead">Nearly 4 years of enterprise escalation leadership across the full Field Service product suite</span> — Asset Service Management, Scheduling &amp; Optimization, and Mobile Workforce — combined with active investment in Agentforce enablement and the AI-first product agenda. <strong>This is not classroom knowledge; it is working fluency built under commercial pressure.</strong></p>
             <ul class="pm-list" style="margin-top:12px">
               <li><div class="pm-dot">→</div><div><strong>Agentforce Field Service — customer implementation unblocked</strong> (Case 472524559): directly engaged the Agentforce FS enablement team to resolve a customer trying to implement the Post-Work Summary agent feature. Acted as the bridge between customer intent and product capability.</div></li>
               <li><div class="pm-dot">→</div><div><strong>100% Agentforce Innovator certification across team</strong> — drove team-wide completion of Agentforce Innovator; team reached 5 Agentforce Legend completions. Not a compliance exercise — a strategic signal to leadership on AI-readiness posture.</div></li>
@@ -740,7 +747,7 @@ body {
             <div class="acc-arrow">▾</div>
           </summary>
           <div class="acc-body">
-            <p class="intro-p">I own a weekly operational metrics framework — not a dashboard I read, but a cadence I designed, defined, and defend in front of senior leadership every week. The table below is live AMER Field Service H1 FY27 performance data: goal vs actual, with Q1→Q2 trajectory. Every metric tells a story about resource allocation, customer retention, and operational discipline — and I know how to read and act on all of them.</p>
+            <p class="intro-p"><span class="lead">I own a weekly operational metrics framework — not a dashboard I read, but a cadence I designed, defined, and defend in front of senior leadership every week.</span> The table below is live <span class="m">AMER Field Service H1 FY27</span> performance data: goal vs actual, with Q1→Q2 trajectory. Every metric tells a story about resource allocation, customer retention, and operational discipline — and I know how to read and act on all of them.</p>
 
             <div class="kpi-grid">
 
@@ -923,7 +930,7 @@ body {
             <div class="acc-arrow">▾</div>
           </summary>
           <div class="acc-body">
-            <p class="intro-p">18+ years of progressive technical roles give me the ability to engage engineering teams as a peer, not a proxy — reducing translation overhead in sprint planning, architecture discussions, and trade-off conversations.</p>
+            <p class="intro-p"><span class="lead">18+ years of progressive technical roles give me the ability to engage engineering teams as a peer, not a proxy</span> — reducing translation overhead in sprint planning, architecture discussions, and trade-off conversations.</p>
             <div class="tags">
               <span class="tag">Dell Boomi · Cloud &amp; ML</span>
               <span class="tag">Microsoft MCITP &amp; MCSE</span>
@@ -946,7 +953,7 @@ body {
             <div class="acc-arrow">▾</div>
           </summary>
           <div class="acc-body">
-            <p class="intro-p">Cross-functional leadership is not a line on my CV — it is the operating model I run every week. The evidence below comes from named accounts, named individuals, and documented coordination outcomes — not generalised teamwork claims.</p>
+            <p class="intro-p"><span class="lead">Cross-functional leadership is not a line on my CV — it is the operating model I run every week.</span> The evidence below comes from named accounts, named individuals, and documented coordination outcomes — not generalised teamwork claims.</p>
             <ul class="pm-list">
               <li><div class="pm-dot">→</div><div><strong>150+ account personal engagement within 1,435-account adoption programme — 15+ individual AE/CSM relationships activated</strong>: directly engaged named AEs (Lena Ellingboe, Julianne Webster, Olivia Stanziale, Julie-Anne Larose, Felix Hummel, Jens Fehrenbacher, Oran O'Donoghue, Samuel Alpert, Markus Muther, Andrea Hernandez) and named CSMs/Success Guides on individual account engagements — not a broadcast; a deliberate, account-level outreach discipline.</div></li>
               <li><div class="pm-dot">→</div><div><strong>Purdy Motors — pre-call internal alignment before a single customer interaction</strong>: structured a 3-step internal coordination plan across AE, CSM, and Engineering before the first customer call was made. This is pre-sales coordination discipline — aligning the team on the narrative, the ask, and the escalation path in advance.</div></li>
@@ -969,7 +976,7 @@ body {
             <div class="acc-arrow">▾</div>
           </summary>
           <div class="acc-body">
-            <p class="intro-p">Representing Salesforce as a product expert in customer interactions is not about knowing every API. It is about combining technical depth with empathy for business impact — and consistently turning pressure moments into trust-building outcomes. The evidence below is documented and named.</p>
+            <p class="intro-p"><span class="lead">Representing Salesforce as a product expert in customer interactions is not about knowing every API.</span> It is about combining technical depth with empathy for business impact — and <strong>consistently turning pressure moments into trust-building outcomes</strong>. The evidence below is documented and named.</p>
             <ul class="pm-list">
               <li><div class="pm-dot">→</div><div><strong>WOLI / Master-Detail delete permissions — "working as designed" turned into a trust moment</strong>: received a customer challenge on expected platform behaviour. Acknowledged the concern as legitimate, explained the platform constraint clearly, provided three actionable options, and directed the customer to the Idea Exchange with explicit acknowledgement of their Premier+ status and voice weight. The response is a textbook example of product expert customer communication — transparent, empathetic, and commercially aware.</div></li>
               <li><div class="pm-dot">→</div><div><strong>Medtronic — technical advisory at senior stakeholder level</strong>: led a customer call covering RAM behaviour, device performance, and priming thresholds for a product area with no published whitepaper on exact RAM requirements. Delivered a clear, technically credible position to senior stakeholders — becoming the trusted point of reference for undocumented product behaviour.</div></li>
@@ -1091,8 +1098,8 @@ body {
   <div class="card-body">
     <div class="philo-body">
       <div class="philo-text-col">
-        <p>My leadership framework — <strong>Achievement · Balance · Connection · Diversity</strong> — is not a performance. It is the operating system behind the team culture and stakeholder relationships that made the escalation outcomes above possible.</p>
-        <p>A PM who leads with this philosophy builds the kind of team and customer trust that sustains high performance across release cycles. In a product that serves field workers doing time-critical, physically demanding, high-stakes work — this people-first orientation is a product advantage, not a soft benefit.</p>
+        <p><span class="lead">My leadership framework — <strong>Achievement · Balance · Connection · Diversity</strong> — is not a performance.</span> It is the operating system behind the team culture and stakeholder relationships that made the escalation outcomes above possible.</p>
+        <p><span class="lead">A PM who leads with this philosophy builds the kind of team and customer trust that sustains high performance across release cycles.</span> In a product that serves field workers doing time-critical, physically demanding, high-stakes work — <strong>this people-first orientation is a product advantage, not a soft benefit</strong>.</p>
       </div>
       <div class="philo-pillars-col">
         <div class="pillar-card pa">
