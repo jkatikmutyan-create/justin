@@ -127,12 +127,39 @@ body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink
 .summary-intro p:last-child { margin-bottom: 0; }
 
 /* ══════════ ACCORDION ══════════ */
-.accordion { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.05); }
-details.acc { background: var(--surface); border: none; border-bottom: 1px solid #EDF1F7; border-radius: 0; overflow: hidden; transition: background 0.2s; }
-details.acc:first-child { border-radius: 12px 12px 0 0; }
-details.acc:last-child  { border-bottom: none; border-radius: 0 0 12px 12px; }
-details.acc[open] { background: #FAFCFF; }
-details.acc:not([open]):hover { background: #F5F2EC; }
+.accordion { display: flex; flex-direction: column; gap: 10px; }
+details.acc {
+  background: var(--surface);
+  border: 1px solid rgba(213,222,236,0.85);
+  border-bottom-color: #C8D3E4;
+  border-right-color: #D0D9E8;
+  border-left: 4px solid transparent;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.95) inset,
+    0 2px 6px rgba(0,0,0,0.05),
+    0 6px 20px rgba(0,0,0,0.06);
+  transition: box-shadow 0.28s, border-color 0.22s, transform 0.28s, background 0.22s;
+}
+details.acc[open] {
+  border-left-color: #A0896A;
+  background: #FDFCFB;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.95) inset,
+    0 4px 14px rgba(160,137,106,0.14),
+    0 12px 32px rgba(0,0,0,0.07);
+}
+details.acc:not([open]):hover {
+  border-left-color: #A0896A;
+  background: #FAF8F5;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.95) inset,
+    0 6px 22px rgba(160,137,106,0.18),
+    0 16px 40px rgba(0,0,0,0.08),
+    -3px 0 0 rgba(160,137,106,0.25);
+  transform: translateY(-3px) translateX(2px);
+}
 details.acc summary { display: flex; align-items: center; gap: 12px; padding: 16px 20px; cursor: pointer; list-style: none; user-select: none; background: var(--surface); transition: background 0.2s; }
 details.acc[open] summary { background: var(--surface2); }
 details.acc summary::-webkit-details-marker { display: none; }
